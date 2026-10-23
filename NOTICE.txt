@@ -1,0 +1,30 @@
+Snow's South London water supply study, 1854
+============================================
+
+Source:   John Snow, On the Mode of Communication of Cholera, second
+          edition, London: John Churchill, 1855. Table IX and the
+          first-four-weeks figures in the surrounding text.
+
+Obtained: Project Gutenberg eBook #72894, release date 7 February 2024,
+          produced from scanned images of public domain material from
+          the Google Books project by Richard Tonsing, MWS and the
+          Online Distributed Proofreading Team, with maps provided by
+          the UCLA Fielding School of Public Health website.
+          https://www.gutenberg.org/ebooks/72894
+
+Licence:  None applies to the figures. The publication is from 1855 and
+          is in the public domain, and the figures are facts rather than
+          expression. The transcription in data/ is dedicated to the
+          public domain under CC0 1.0 (see LICENSE), so nothing here
+          adds a restriction that the source did not carry.
+
+          This was a deliberate choice of source. The same figures are
+          available inside licensed packages -- HistData is GPL,
+          causaldata is MIT -- and taking them from a digitisation would
+          have adopted that digitisation's terms for data that is
+          otherwise unencumbered. Transcribing from the original inherits
+          nothing.
+
+See provenance.json for the digest of the text transcribed from, the
+three separate dates these figures carry, and the limits that apply to
+any analysis built on them.
