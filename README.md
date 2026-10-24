@@ -132,6 +132,16 @@ and causaldata (MIT), and taking them from either would have adopted that digiti
 for data that is otherwise unencumbered. Transcribing from the original inherits nothing, so
 this repository can be used by a project under any licence. The transcription itself is CC0.
 
+**One file is an exception, and it is the one that makes the maps work.**
+`geo/sub-districts-csds.geojson` carries the 32 sub-district polygons and is redistributed
+unmodified under the **BSD 2-Clause Licence**, Copyright (c) 2019 Thomas Coleman. Everything else
+here is CC0. The full licence text, the source and the boundary lineage are in `NOTICE.txt`.
+
+That exception is the mechanism working, not a compromise of it. BSD-2 asks for attribution and
+nothing more: it does not restrict who may receive a map made from these boundaries, which is
+precisely what ruled out the alternatives below. A repository that carries its own terms can
+accept a file like this; Fieldwork itself could not.
+
 ## The three dates, which do not agree
 
 - **Deaths**: the first seven weeks of the 1854 epidemic (and separately the first four).
@@ -155,11 +165,6 @@ A Fieldwork workflow bundle. The widget gap is closed — `rate` reads a long ta
 release on 2026-10-24, so these rows no longer need geometry to be computed over — and what
 remains is the workflow document itself. When it exists the bundle lands here as
 `fieldwork-workflow-bundle.json.gz` and is loaded through Fieldwork's import.
-
-**Boundaries for the 32 sub-districts.** Snow's Map 2 drew them; the plain-text source this
-repository transcribes from carries an illustration placeholder and no coordinates. Mapping these
-rows means 1851 registration sub-district boundaries from an external source, which would arrive
-with its own licence — the situation this repository's separation exists to handle.
 
 The manifest format by which Fieldwork would list example repositories is not defined yet; see
 experiment 127 in the Fieldwork repository.
@@ -193,3 +198,80 @@ two cells flagged above:
 Two people working from different scans, who had not seen each other's work, arrived at the same
 two numbers and the same two problems. That is as close to confirmation as a transcription gets:
 it rules out a reading error here and leaves the discrepancy in the source, where it belongs.
+
+## References
+
+Every figure and every coordinate in this repository came from somewhere. This lists each source,
+what it was used **for**, and its terms — including the sources that were examined and *not* used,
+because the reason one was rejected is part of the evidence.
+
+### The primary source
+
+- **Snow, J. (1855).** *On the Mode of Communication of Cholera*, second edition. London: John
+  Churchill. **Tables VII, VIII, IX and XII**, and **Map 2**.
+  Public domain. Everything here is a transcription of, or a measurement taken from, this work.
+
+### The digitisations transcribed from
+
+- **Project Gutenberg eBook 72894**, produced from Google Books scans of the 1855 second edition.
+  `https://www.gutenberg.org/ebooks/72894` ·
+  text sha256 `8269bfd70fced302b136966707112d455169f2bdb4d5a40229c23c20ecb88669`
+  *Used for:* every figure in `data/`. Note that the Table VIII population of Lambeth Church (2nd)
+  is mistyped in this e-text; see above.
+- **Project Gutenberg 72894, images edition**, `images/i_map2_large.jpg`, 5000 × 3934,
+  sha256 `c5dd7255ddab6cebd960f13f9658a2dba6f7cb8397b3d03963c369d2886b985b`.
+  *Used for:* the georeference in `geo/` and the supply zones traced from the colour washes.
+- **Wellcome Collection L0063432**, the same plate at 6004 × 4896, CC-BY 4.0, via Wikimedia
+  Commons. *Examined and not used for the tracing:* it is the higher-resolution scan, but its
+  colours are closer to the aged paper and separate less cleanly than Gutenberg's, which appear to
+  have been corrected. It remains the better scan for line work.
+
+### Independent verification
+
+- **Coleman, T. (2019).** *Causality in the Time of Cholera: John Snow as a Prototype for Causal
+  Inference.* Working paper, SSRN `https://papers.ssrn.com/abstract=3262234`.
+  Data: `https://github.com/tscoleman/SnowCholera`, **BSD-2-Clause**, transcribed from the
+  Internet Archive scan `b28985266`.
+  *Used for:* an independent check of Tables VIII and XII, and corroboration of the two Table IX
+  discrepancies, which his own arithmetic check flags.
+- **Coleman, T. (2020).** *John Snow, Cholera, and South London Reconsidered.* Working paper,
+  SSRN `https://papers.ssrn.com/abstract=3696028`.
+- **Falcone, M., Koschinsky, J., Vinten-Johansen, P., Coleman, T., and Anselin, L. (2023).**
+  *John Snow & the Cholera Epidemic in Mid-19th Century London: 8 Datasets With Documentation for
+  Use in GeoDa*, version 4, 9 March 2023. Center for Spatial Data Science, University of Chicago.
+  Dataset 8, `subdistricts`. `https://geodacenter.github.io/data-and-lab/snow8/` · **BSD 2** as
+  stated in its documentation.
+  *Used for:* the cell-by-cell verification reported above — 224 of 224 — and as an independently
+  georeferenced check on this repository's placement of Map 2.
+  **Redistributed here** unmodified as `geo/sub-districts-csds.geojson`; see `NOTICE.txt`.
+
+### Geography
+
+- **Koch, T. and Denike, K. (2006).** *Rethinking John Snow's South London study: A Bayesian
+  evaluation and recalculation.* Social Science and Medicine 63(1), 271–283.
+  The sub-district boundaries in the CSDS dataset originate here, shared by the authors and
+  modified by CSDS after georeferencing Map 2 in QGIS with about thirty control points. Koch and
+  Denike's own terms are not stated in that documentation.
+- **OpenStreetMap contributors**, via the Nominatim geocoder, ODbL.
+  *Used for:* the four control-point coordinates in `geo/map2-georeference.json`. Four coordinates
+  are not a substantial extract of that database, so no share-alike obligation is asserted; the
+  attribution is recorded because the figures came from somewhere.
+
+### Examined and not used
+
+- **Satchell, M., Shaw-Taylor, L.M.W.S., Wrigley, E.A., Kitson, P.K. and Newton, G.H. (2023).**
+  *1851 England and Wales census registration subdistricts.* UK Data Archive, SN 852945,
+  DOI `10.5255/UKDA-SN-852945`. 3,316 polygons for all 2,182 registration sub-districts of England
+  and Wales, derived from Kain and Oliver's parish maps.
+  **The right units, and unusable here.** It is released under the UK Data Service End User
+  Licence, whose clause 4 forbids giving access to the data *or to any dataset derived from it*
+  except to registered users. That reaches a practitioner's own output: a map made by joining
+  these figures to those boundaries could not be handed to a response team. The restriction is not
+  about commercial use, and a non-commercial project does not escape it.
+- **Great Britain Historical GIS Project.** *Great Britain Historical Database: Digital Boundaries
+  for Registration Districts of England and Wales, 1851–1911.* UK Data Service SN 9032,
+  CC-BY-SA 4.0, open.
+  **Permissively licensed, and the wrong units.** It carries registration *districts*, not
+  sub-districts. Aggregating the 32 sub-districts to those districts destroys the contrast the
+  study is about: the Camberwell registration district alone contains sub-districts from all three
+  of Snow's water-supply groups.
