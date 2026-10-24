@@ -142,6 +142,26 @@ nothing more: it does not restrict who may receive a map made from these boundar
 precisely what ruled out the alternatives below. A repository that carries its own terms can
 accept a file like this; Fieldwork itself could not.
 
+## The workflow
+
+`fieldwork-workflow.json.gz` is a Fieldwork workflow document. Import it through Fieldwork's
+import control; it carries its own data, so it runs offline with nothing else fetched.
+
+It computes **deaths per 1,000 people for each of the 32 sub-districts** — Table VIII's counts over
+Table VIII's 1851 population — which is the thing Table IX cannot give you. Table IX's denominator
+is houses, and deaths per house is not a mortality rate.
+
+Three widgets: a `table_input` holding Table VIII in long form, a `rate` reading it as a table,
+and a `table_output`. The rate declares what it is a rate of, because Fieldwork refuses to compute
+one otherwise: the numerator covers the seven weeks ending 26 August 1854, the denominator is the
+census of 1851, and the two are three years apart. It reports no rate below a denominator of 1,000
+people.
+
+Verified to import and run in both Chromium and WebKit on 2026-10-24. The ranking it produces puts
+St. Olave (6.61), St. James Bermondsey (6.51) and St. Saviour (6.34) at the top and Brixton (0.62),
+Putney (0.19) and Dulwich (0.00) at the bottom — the top four all Southwark and Vauxhall's alone.
+That is Snow's result, at the unit his table is keyed on.
+
 ## The three dates, which do not agree
 
 - **Deaths**: the first seven weeks of the 1854 epidemic (and separately the first four).
@@ -161,10 +181,11 @@ stated, and reports whether they agree — this is the data that machinery was w
 
 ## What this repository does not yet contain
 
-A Fieldwork workflow bundle. The widget gap is closed — `rate` reads a long table as of its 0.2.0
-release on 2026-10-24, so these rows no longer need geometry to be computed over — and what
-remains is the workflow document itself. When it exists the bundle lands here as
-`fieldwork-workflow-bundle.json.gz` and is loaded through Fieldwork's import.
+**A way for Fieldwork to read the boundaries.** `geo/sub-districts-csds.geojson` is here and the
+application has no door for it: Fieldwork has no polygon input widget, and nothing in it produces
+polygons from a table, so the 32 sub-districts cannot currently be brought onto a canvas or joined
+to these figures. The georeferenced plate and the supply zones are in the same position. Until
+that changes, the map layers in `geo/` are for other tools, and the workflow below is tabular.
 
 The manifest format by which Fieldwork would list example repositories is not defined yet; see
 experiment 127 in the Fieldwork repository.
