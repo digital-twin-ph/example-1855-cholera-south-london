@@ -21,6 +21,11 @@
   },
   "files": [
     {
+      "path": "fieldwork-workflow.json.gz",
+      "sha256": "a69a31dfbec6847304210aa28162e162a2e7f1697655f984cd72d2ad3ae7fcdf",
+      "bytes": 2169
+    },
+    {
       "path": "data/table-xii-sub-districts-1849-1854.csv",
       "sha256": "306ce1eed8f99df9a6008d6a7eff9db8a3f0e06205b2cd0394f9de4c18b37728",
       "bytes": 2229
@@ -42,8 +47,8 @@
     },
     {
       "path": "NOTICE.txt",
-      "sha256": "34dcb1856a3713ae6474543e9051efb456ffa65b1f6ee1f5cf26e05affe6c1e9",
-      "bytes": 1558
+      "sha256": "cabfd463e5a70d30e8cbbdc5de40fa52ffffacabdec9fd450d5dfca28662ffd8",
+      "bytes": 4120
     },
     {
       "path": "LICENSE",
