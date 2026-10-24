@@ -6,7 +6,7 @@
   "sourceDigest": "8269bfd70fced302b136966707112d455169f2bdb4d5a40229c23c20ecb88669",
   "publisher": "Project Gutenberg, eBook #72894, release date 7 February 2024",
   "originalSource": "John Snow, On the Mode of Communication of Cholera, second edition, London: John Churchill, 1855. Tables VIII, IX and XII, and the first-four-weeks figures stated in the surrounding text.",
-  "transcription": "Transcribed by hand from the Gutenberg plain text: the two summary tables on 2026-10-23, the two sub-district tables on 2026-10-24. Four tables, 69 data rows. No value is derived here -- the per-10,000 columns are Snow's own, not recomputed -- so a reader can check this transcription against the source rather than against an arithmetic claim made on its behalf.\n\nChecked by summation against the totals Snow prints: Table VIII's deaths column sums to its printed 1,514, and all six of Table XII's group totals come out exactly. Table VIII's population column sums to 486,900 against a printed 486,936; Table VII prints the same population column and gives Lambeth Church (2nd) as 26,784 where Table VIII gives 26,748, which accounts for the 36 exactly and reconciles with the total printed at the foot of both tables. The file keeps 26,748 as Table VIII prints it. Because the immediate source is a Project Gutenberg transcription rather than a facsimile of the 1855 printing, whether that misprint is Snow's, his printer's or the e-text's is not established here.",
+  "transcription": "Transcribed by hand from the Gutenberg plain text: the two summary tables on 2026-10-23, the two sub-district tables on 2026-10-24. Four tables, 69 data rows. No value is derived here -- the per-10,000 columns are Snow's own, not recomputed -- so a reader can check this transcription against the source rather than against an arithmetic claim made on its behalf.\n\nVERIFIED. Table VIII was compared cell by cell against two independent transcriptions: Coleman (2019), github.com/tscoleman/SnowCholera, BSD-2-Clause, made from the archive.org scan b28985266; and the Center for Spatial Data Science's `subdistricts` dataset, which carries Coleman's attributes. 224 of 224 cells -- 32 sub-districts across 7 columns -- match exactly, and all seven column totals match the totals Snow prints.\n\nOne cell was corrected. Lambeth Church (2nd)'s 1851 population is given as 26,748 in the Project Gutenberg Table VIII and as 26,784 in its own Table VII; both independent transcriptions read 26,784, and only 26,784 reconciles with the 486,936 printed at the foot of both tables. The error is in the e-text rather than in the 1855 printing, so this file carries 26,784. Transcribing a digitisation as printed reproduced somebody else's typo, which is why the summation check matters.\n\nTable IX's two discrepancies are corroborated: Coleman's own check flags the same two cells, Lambeth (37.54 against a printed 37) and Rest of London (55.46 against a printed 59).",
   "licence": {
     "stated": "None. The publication is 1855 and is in the public domain; the figures are facts.",
     "transcription": "CC0-1.0",
@@ -27,8 +27,8 @@
     },
     {
       "path": "data/table-viii-sub-districts-seven-weeks.csv",
-      "sha256": "308d3bbab7a9d29ab87bcc9062589b28c966e7613d3b6a0f0817177aac305ae0",
-      "bytes": 1024
+      "sha256": "29abb57c8e071995d2b3d2db348fcf74fa1dc0a1007b14630382aa1c3cc17d18",
+      "bytes": 1460
     },
     {
       "path": "data/table-ix-first-seven-weeks.csv",
@@ -57,5 +57,24 @@
     "Snow records that water supply remained unascertained in a number of cases, because residents often did not know their supplier; he assigned exposure by a chloride test where he could. The counts are therefore of ascertained supply.",
     "Rest of London is not a control group. It is everything else, including households served by neither company.",
     "There is no geography in this repository. Mapping these figures needs 1850s registration sub-district boundaries, which are a separate acquisition with their own licence."
-  ]
+  ],
+  "verification": {
+    "independentSources": [
+      {
+        "name": "Coleman, T. (2019), Causality in the Time of Cholera",
+        "repository": "https://github.com/tscoleman/SnowCholera",
+        "licence": "BSD-2-Clause",
+        "sourceScan": "https://archive.org/details/b28985266",
+        "covers": "Tables VII, VIII, IX, XII transcribed independently"
+      },
+      {
+        "name": "Center for Spatial Data Science, University of Chicago, dataset 8 'subdistricts'",
+        "source": "https://geodacenter.github.io/data-and-lab/snow8/",
+        "licence": "BSD-2 as stated in its documentation",
+        "covers": "Coleman's attributes for 32 sub-districts, with boundary polygons",
+        "boundaryLineage": "Digitised by Koch and Denike (2006), shared by the authors, modified by CSDS after georeferencing Snow's Map 2 in QGIS with about 30 control points. Koch and Denike's own terms are not stated in that documentation."
+      }
+    ],
+    "result": "224 of 224 Table VIII cells match; all 7 column totals match Snow's printed totals; Table IX's two discrepancies are independently flagged."
+  }
 }

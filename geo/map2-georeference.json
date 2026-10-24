@@ -1,0 +1,138 @@
+{
+  "schema": "fieldwork/example-georeference/1",
+  "created": "2026-10-24",
+  "image": {
+    "plate": "Map 2",
+    "title": "Showing the boundaries of the Registrar-General's districts on the south side of the Thames in London, and also the water supply of those districts.",
+    "source": "https://www.gutenberg.org/cache/epub/72894/images/i_map2_large.jpg",
+    "sourceSmall": "https://www.gutenberg.org/cache/epub/72894/images/i_map2.jpg",
+    "sha256_large": "c5dd7255ddab6cebd960f13f9658a2dba6f7cb8397b3d03963c369d2886b985b",
+    "sha256_small": "a3131c5fc9ad7605ae1c9b79d58ad3f54baab1cda26bfa176b9a2cfa2cc297f0",
+    "pixels_large": {
+      "width": 5000,
+      "height": 3934
+    },
+    "pixels_small": {
+      "width": 1002,
+      "height": 788
+    },
+    "note": "The small image is a pure downscale of the same plate (aspect 1.2716 against 1.2710), so both share these bounds."
+  },
+  "model": {
+    "kind": "north-up affine, no rotation, independent linear scales in longitude and latitude",
+    "why": "The compass rose on the plate is vertical, so the plate needs no rotation. The two axes were fitted separately and agreed on scale to 0.09% (aspect 1.0009), which is what a true survey-based plan produces and a sketch does not.",
+    "x_px_per_degree_lon": 21912.6,
+    "x_intercept": 5239.2,
+    "y_px_per_degree_lat": -35143.5,
+    "y_intercept": 1810527.0,
+    "metres_per_pixel": {
+      "x": 3.165,
+      "y": 3.162
+    },
+    "aspect": 1.0009
+  },
+  "bounds_wgs84": {
+    "north": 51.51819,
+    "south": 51.40625,
+    "west": -0.2391,
+    "east": -0.01092
+  },
+  "controlPoints": [
+    {
+      "feature": "Kennington Oval (cricket ground outline)",
+      "pixel": {
+        "x": 2764,
+        "y": 1203
+      },
+      "wgs84": {
+        "lat": 51.48385,
+        "lon": -0.11503
+      },
+      "residual_px": {
+        "dx": -45.4,
+        "dy": 3.9
+      },
+      "residual_m": {
+        "dx": -144,
+        "dy": 12
+      }
+    },
+    {
+      "feature": "Battersea Park",
+      "pixel": {
+        "x": 1770,
+        "y": 1370
+      },
+      "wgs84": {
+        "lat": 51.47921,
+        "lon": -0.15706
+      },
+      "residual_px": {
+        "dx": 27.7,
+        "dy": -0.0
+      },
+      "residual_m": {
+        "dx": 88,
+        "dy": 0
+      }
+    },
+    {
+      "feature": "Crystal Palace grounds",
+      "pixel": {
+        "x": 3707,
+        "y": 3400
+      },
+      "wgs84": {
+        "lat": 51.42139,
+        "lon": -0.07004
+      },
+      "residual_px": {
+        "dx": -2.5,
+        "dy": 2.0
+      },
+      "residual_m": {
+        "dx": -8,
+        "dy": 6
+      }
+    },
+    {
+      "feature": "Nunhead Cemetery",
+      "pixel": {
+        "x": 4080,
+        "y": 1950
+      },
+      "wgs84": {
+        "lat": 51.46287,
+        "lon": -0.05198
+      },
+      "residual_px": {
+        "dx": 20.2,
+        "dy": -5.8
+      },
+      "residual_m": {
+        "dx": 64,
+        "dy": -18
+      }
+    }
+  ],
+  "accuracy": {
+    "rms_m": 91,
+    "max_m": 144,
+    "note": "These residuals are dominated by the identification of the control points, not by the plate. Matching an 1855 drawn feature to a modern centroid is ambiguous by tens of metres, and the independent check below agrees far more closely than the residuals do."
+  },
+  "validation": {
+    "method": "Snow's plate carries a thin arc labelled 'Radius of 4 Miles from Charing Cross'. The circle of 4 statute miles about Charing Cross was projected through the fitted transform and compared with the drawn arc. This is internal to the source and independent of the control points.",
+    "result": "Centred on the Charles I statue (51.50736, -0.12775), the traditional datum for distances from London, the projected circle follows the drawn arc within about 5 px (16 m) at two places 2.8 km apart along it. Centred on Nominatim's 'Charing Cross' in the Strand (51.50750, -0.12369) it sits about 25 px north of the drawn arc.",
+    "finding": "The test validates the transform and identifies the datum: the engraver's Charing Cross is the statue, not the Strand."
+  },
+  "limits": [
+    "The transform is linear in latitude. A web map in Web Mercator stretches the image into its latitude bounds non-linearly; across the 0.11 degree height of this plate that differs by about 0.25%, a few tens of metres mid-plate.",
+    "Four control points, all of them areal features whose centroid in 1855 and today are not the same point. The accuracy figure is a measurement of this procedure, not of Snow's surveying.",
+    "No check was made of the plate's interior consistency away from the arc. A lithograph can be locally distorted by printing and by the paper, and the fold visible down the middle of the scan is not corrected for.",
+    "Nothing here establishes that features drawn on the plate are correctly placed. It establishes where the plate sits, not whether the plate is right."
+  ],
+  "attribution": {
+    "controlPointCoordinates": "Obtained from OpenStreetMap via the Nominatim geocoder, (c) OpenStreetMap contributors, ODbL. Four point coordinates are not a substantial extract of that database, so no share-alike obligation is asserted here; the attribution is recorded because the figures came from somewhere and a reader should know where.",
+    "plate": "John Snow, On the Mode of Communication of Cholera, 2nd ed., London: John Churchill, 1855, Map 2. Public domain. Scan via Project Gutenberg ebook 72894, from Google Books."
+  }
+}
