@@ -1,51 +1,61 @@
 {
- "schema": "fieldwork/example-provenance/1",
- "retrieved": "2026-10-23",
- "title": "Snow's South London water supply study, 1854",
- "source": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
- "sourceDigest": "8269bfd70fced302b136966707112d455169f2bdb4d5a40229c23c20ecb88669",
- "publisher": "Project Gutenberg, eBook #72894, release date 7 February 2024",
- "originalSource": "John Snow, On the Mode of Communication of Cholera, second edition, London: John Churchill, 1855. Table IX, and the first-four-weeks figures stated in the surrounding text.",
- "transcription": "Transcribed by hand from the Gutenberg plain text on 2026-10-23. Two tables, five rows in total. No value is derived here: the per-10,000 columns are Snow's own, not recomputed, so a reader can check this transcription against the source rather than against an arithmetic claim made on its behalf.",
- "licence": {
-  "stated": "None. The publication is 1855 and is in the public domain; the figures are facts.",
-  "transcription": "CC0-1.0",
-  "shippedWithData": true,
-  "note": "Chosen deliberately. The same figures sit inside HistData (GPL) and causaldata (MIT); taking them from a digitisation adopts that digitisation's terms for data that is otherwise unencumbered. Transcribed from the original, this repository inherits nothing and can be used by a project under any licence."
- },
- "dates": {
-  "numeratorPeriod": "1854-07-08/1854-08-26 for Table IX, the first seven weeks of the epidemic; 1854-07-08/1854-08-05 for the four-week figures. Snow states the periods as weeks of the epidemic rather than as calendar dates, and the dates given here are the conventional reading of them, not his words.",
-  "denominatorVintage": "1853-01-01/1853-12-31. The house counts are a return made to Parliament covering that year.",
-  "publication": "1855",
-  "note": "These do not agree, and that is a property of the study rather than a defect in the transcription. The houses were counted in 1853 and the deaths occurred in 1854. Any rate computed from them states a 1854 numerator over an 1853 denominator and should say so."
- },
- "files": [
-  {
-   "path": "data/table-ix-first-seven-weeks.csv",
-   "sha256": "96232f9e6983ac7aeb657cec43ac1ded1e6df2d6d3f3093b704738d730d66605",
-   "bytes": 151
+  "schema": "fieldwork/example-provenance/1",
+  "retrieved": "2026-10-24",
+  "title": "Snow's South London water supply study, 1854",
+  "source": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+  "sourceDigest": "8269bfd70fced302b136966707112d455169f2bdb4d5a40229c23c20ecb88669",
+  "publisher": "Project Gutenberg, eBook #72894, release date 7 February 2024",
+  "originalSource": "John Snow, On the Mode of Communication of Cholera, second edition, London: John Churchill, 1855. Tables VIII, IX and XII, and the first-four-weeks figures stated in the surrounding text.",
+  "transcription": "Transcribed by hand from the Gutenberg plain text: the two summary tables on 2026-10-23, the two sub-district tables on 2026-10-24. Four tables, 69 data rows. No value is derived here -- the per-10,000 columns are Snow's own, not recomputed -- so a reader can check this transcription against the source rather than against an arithmetic claim made on its behalf.\n\nChecked by summation against the totals Snow prints: Table VIII's deaths column sums to its printed 1,514, and all six of Table XII's group totals come out exactly. Table VIII's population column sums to 486,900 against a printed 486,936; Table VII prints the same population column and gives Lambeth Church (2nd) as 26,784 where Table VIII gives 26,748, which accounts for the 36 exactly and reconciles with the total printed at the foot of both tables. The file keeps 26,748 as Table VIII prints it. Because the immediate source is a Project Gutenberg transcription rather than a facsimile of the 1855 printing, whether that misprint is Snow's, his printer's or the e-text's is not established here.",
+  "licence": {
+    "stated": "None. The publication is 1855 and is in the public domain; the figures are facts.",
+    "transcription": "CC0-1.0",
+    "shippedWithData": true,
+    "note": "Chosen deliberately. The same figures sit inside HistData (GPL) and causaldata (MIT); taking them from a digitisation adopts that digitisation's terms for data that is otherwise unencumbered. Transcribed from the original, this repository inherits nothing and can be used by a project under any licence."
   },
-  {
-   "path": "data/first-four-weeks.csv",
-   "sha256": "b3d7eb4032fc53d61d6bdbc183e48f55278992c67464abbf79236b21888eb8ae",
-   "bytes": 132
+  "dates": {
+    "numeratorPeriod": "1854-07-08/1854-08-26 for Table IX, the first seven weeks of the epidemic; 1854-07-08/1854-08-05 for the four-week figures. Snow states the periods as weeks of the epidemic rather than as calendar dates, and the dates given here are the conventional reading of them, not his words.",
+    "denominatorVintage": "1853-01-01/1853-12-31. The house counts are a return made to Parliament covering that year.",
+    "publication": "1855",
+    "note": "These do not agree, and that is a property of the study rather than a defect in the transcription. The houses were counted in 1853 and the deaths occurred in 1854. Any rate computed from them states a 1854 numerator over an 1853 denominator and should say so."
   },
-  {
-   "path": "NOTICE.txt",
-   "sha256": "34dcb1856a3713ae6474543e9051efb456ffa65b1f6ee1f5cf26e05affe6c1e9",
-   "bytes": 1558
-  },
-  {
-   "path": "LICENSE",
-   "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
-   "bytes": 7048
-  }
- ],
- "limits": [
-  "A rate per 10,000 HOUSES is not a rate per person. Household size differed between the two companies' customers and is not recorded here.",
-  "The two companies' mains ran down the same streets and their customers were intermixed house by house, which is the study's strength as a natural experiment and the reason a sub-district or company-level rate is not an individual's risk. The ecological fallacy is live here.",
-  "Snow records that water supply remained unascertained in a number of cases, because residents often did not know their supplier; he assigned exposure by a chloride test where he could. The counts are therefore of ascertained supply.",
-  "Rest of London is not a control group. It is everything else, including households served by neither company.",
-  "There is no geography in this repository. Mapping these figures needs 1850s registration sub-district boundaries, which are a separate acquisition with their own licence."
- ]
+  "files": [
+    {
+      "path": "data/table-xii-sub-districts-1849-1854.csv",
+      "sha256": "306ce1eed8f99df9a6008d6a7eff9db8a3f0e06205b2cd0394f9de4c18b37728",
+      "bytes": 2229
+    },
+    {
+      "path": "data/table-viii-sub-districts-seven-weeks.csv",
+      "sha256": "308d3bbab7a9d29ab87bcc9062589b28c966e7613d3b6a0f0817177aac305ae0",
+      "bytes": 1024
+    },
+    {
+      "path": "data/table-ix-first-seven-weeks.csv",
+      "sha256": "96232f9e6983ac7aeb657cec43ac1ded1e6df2d6d3f3093b704738d730d66605",
+      "bytes": 151
+    },
+    {
+      "path": "data/first-four-weeks.csv",
+      "sha256": "b3d7eb4032fc53d61d6bdbc183e48f55278992c67464abbf79236b21888eb8ae",
+      "bytes": 132
+    },
+    {
+      "path": "NOTICE.txt",
+      "sha256": "34dcb1856a3713ae6474543e9051efb456ffa65b1f6ee1f5cf26e05affe6c1e9",
+      "bytes": 1558
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048
+    }
+  ],
+  "limits": [
+    "A rate per 10,000 HOUSES is not a rate per person. Household size differed between the two companies' customers and is not recorded here.",
+    "The two companies' mains ran down the same streets and their customers were intermixed house by house, which is the study's strength as a natural experiment and the reason a sub-district or company-level rate is not an individual's risk. The ecological fallacy is live here.",
+    "Snow records that water supply remained unascertained in a number of cases, because residents often did not know their supplier; he assigned exposure by a chloride test where he could. The counts are therefore of ascertained supply.",
+    "Rest of London is not a control group. It is everything else, including households served by neither company.",
+    "There is no geography in this repository. Mapping these figures needs 1850s registration sub-district boundaries, which are a separate acquisition with their own licence."
+  ]
 }
