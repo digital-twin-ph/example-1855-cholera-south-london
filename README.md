@@ -57,26 +57,41 @@ fatal"* among Southwark and Vauxhall's customers:
 The per-10,000 columns are Snow's, not recomputed here, so this transcription can be checked
 against the source rather than against arithmetic performed on its behalf.
 
-### Table VIII's population column is 36 short of its own total, and Table VII says why
+### A 36-person error, and where it actually came from
 
-Transcribing the 32 rows and adding them up: the deaths column sums to **1,514**, exactly the
-printed total, and all six of Table XII's group totals come out exactly (2,261 / 3,905 / 162 for
-1849, and 2,458 / 2,547 / 37 for 1854). Seven checks out of eight.
+Transcribing the 32 rows and adding them up: the deaths column summed to **1,514**, exactly the
+printed total, and all six of Table XII's group totals came out exactly. The populations summed to
+**486,900** against a printed **486,936** — 36 short.
 
-The eighth: Table VIII's populations sum to **486,900** against a printed **486,936**.
+Three independent sources settle it, and none of them blames Snow:
 
-Table VII prints the same 1851 population column for the same 32 sub-districts, and it resolves
-it. For **Lambeth Church (2nd)** Table VII prints **26,784** where Table VIII prints **26,748** —
-a transposition, and a difference of exactly 36. With 26,784 the column sums to 486,936, which is
-the total printed at the foot of *both* tables.
+| Source | Lambeth Church (2nd), population 1851 |
+| --- | ---: |
+| Project Gutenberg e-text, Table VIII | 26,748 |
+| Project Gutenberg e-text, Table VII (same column) | **26,784** |
+| Coleman (2019), transcribed from the archive.org scan | **26,784** |
+| Center for Spatial Data Science, `subdistricts` dataset | **26,784** |
+| Required by the total printed at the foot of both tables | **26,784** |
 
-So this one is settled, unlike the rate above: the weight of the evidence is that **26,748 in
-Table VIII is a misprint for 26,784**. Two witnesses print the total, one witness prints the
-higher figure, and only the higher figure reconciles them. The file keeps **26,748 as Table VIII
-prints it**, because that is what the table says and this repository transcribes rather than
-corrects — but anything computing a rate for Lambeth Church (2nd) should use 26,784 and say so.
-The effect is small, about 0.13% of one sub-district's denominator, and the point is not the size
-of it.
+So the slip is in the **e-text**, not in Snow's book. The figure here is 26,784, and the column now
+sums to its printed total.
+
+This is worth recording rather than quietly fixing, because the rule that produced the error was a
+good one. "Transcribe as printed, never correct" is what keeps a transcription checkable — and
+applied to a *digitisation* rather than to the book, it faithfully reproduced somebody else's typo.
+The check that caught it was arithmetic the source itself supplies.
+
+### The whole table, verified against two independent transcriptions
+
+Every figure in `data/table-viii-sub-districts-seven-weeks.csv` has been compared, cell by cell,
+with [Coleman's transcription](https://github.com/tscoleman/SnowCholera) (BSD-2-Clause, made from
+a different scan) and with the Center for Spatial Data Science's `subdistricts` dataset:
+
+- **224 of 224 cells** — 32 sub-districts across 7 columns — match the CSDS dataset exactly.
+- All seven column totals match the totals Snow prints.
+
+What that establishes is that three people reading the same 1855 table got the same numbers. It
+does not establish that the numbers are right, because all three read Snow.
 
 ### One of the five printed rates does not follow from the columns beside it
 
@@ -164,3 +179,17 @@ coincide.
 
 Snow knew the limit and worked past it by going house to house, which is what Table IX counts and
 why it is a different kind of evidence from Table VIII rather than a coarser version of it.
+
+### Independently found, twice
+
+Coleman's transcription carries its own arithmetic check against Table IX, and it flags exactly the
+two cells flagged above:
+
+```
+#Lambeth Company,37.54,38,37,PROBLEM
+#Rest of London,55.46,55,59,PROBLEM
+```
+
+Two people working from different scans, who had not seen each other's work, arrived at the same
+two numbers and the same two problems. That is as close to confirmation as a transcription gets:
+it rules out a reading error here and leaves the discrepancy in the source, where it belongs.
