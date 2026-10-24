@@ -2,8 +2,9 @@ Snow's South London water supply study, 1854
 ============================================
 
 Source:   John Snow, On the Mode of Communication of Cholera, second
-          edition, London: John Churchill, 1855. Table IX and the
-          first-four-weeks figures in the surrounding text.
+          edition, London: John Churchill, 1855. Tables VII, VIII, IX
+          and XII, Map 2, and the first-four-weeks figures in the
+          surrounding text.
 
 Obtained: Project Gutenberg eBook #72894, release date 7 February 2024,
           produced from scanned images of public domain material from
@@ -28,3 +29,53 @@ Licence:  None applies to the figures. The publication is from 1855 and
 See provenance.json for the digest of the text transcribed from, the
 three separate dates these figures carry, and the limits that apply to
 any analysis built on them.
+
+
+THIRD-PARTY FILE
+================
+
+geo/sub-districts-csds.geojson is NOT part of this repository's CC0
+dedication. It is redistributed unmodified under the BSD 2-Clause
+Licence, and it is the only file here that carries terms.
+
+Source:   Falcone, M., Koschinsky, J., Vinten-Johansen, P., Coleman, T.,
+          and Anselin, L. (2023). John Snow & the Cholera Epidemic in
+          Mid-19th Century London: 8 Datasets With Documentation for Use
+          in GeoDa, version 4. Center for Spatial Data Science,
+          University of Chicago. Dataset 8, "subdistricts".
+          https://geodacenter.github.io/data-and-lab/snow8/
+          sha256 8fb2a298458dd2b1b08fc39447d2ca51419c252e14b0e7cf1e7062a588ba0ec3
+
+Lineage:  The attribute data is Thomas Coleman's (2019; 2020), from
+          https://github.com/tscoleman/SnowCholera. The boundaries were
+          digitised by Tom Koch and Ken Denike (2006), shared by the
+          authors, and modified by the Center for Spatial Data Science
+          after georeferencing Snow's Map 2 in QGIS with about thirty
+          control points. Koch and Denike's own terms are not stated in
+          that documentation; the dataset as published states BSD 2.
+
+BSD 2-Clause License
+
+Copyright (c) 2019, Thomas Coleman
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
