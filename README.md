@@ -29,6 +29,33 @@ fatal"* among Southwark and Vauxhall's customers:
 The per-10,000 columns are Snow's, not recomputed here, so this transcription can be checked
 against the source rather than against arithmetic performed on its behalf.
 
+### One of the five printed rates does not follow from the columns beside it
+
+Dividing the columns as printed:
+
+| | Quotient per 10,000 houses | Snow printed |
+| --- | ---: | ---: |
+| Southwark and Vauxhall, seven weeks | 315.39 | 315 |
+| Lambeth, seven weeks | 37.54 | 37 |
+| Rest of London, seven weeks | 55.46 | **59** |
+| Southwark and Vauxhall, four weeks | 71.42 | 71 |
+| Lambeth, four weeks | 5.36 | 5 |
+
+Four of the five are the quotient with the fraction dropped. Lambeth's 37.54 is the only one that
+distinguishes the rules, and it was printed as 37, so the column reads as truncated rather than
+rounded.
+
+Rest of London is not reproduced under either rule. A rate of 59 per 10,000 houses from 1,422
+deaths implies about 241,000 houses, not the 256,423 printed next to it. Which of the two cells is
+wrong cannot be settled from this table, and this repository does not guess: both are transcribed
+as printed, and the discrepancy is recorded here instead of being smoothed away.
+
+This matters for what the figures are used for. 315 against 37 is the contrast Snow drew, and it
+survives either reading -- the ratio is about 8.4 whether the rates are truncated or not. The Rest
+of London row is a bystander in that comparison, which may be why its arithmetic went unchecked for
+as long as the figure has been quoted. Anything computing from this file should divide the first two
+columns and say so, not reproduce 59.
+
 ## Why this is a separate repository
 
 Because a repository boundary is a licence boundary. Fieldwork is Apache-2.0 and cannot carry
