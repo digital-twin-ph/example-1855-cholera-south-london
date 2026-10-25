@@ -142,25 +142,46 @@ nothing more: it does not restrict who may receive a map made from these boundar
 precisely what ruled out the alternatives below. A repository that carries its own terms can
 accept a file like this; Fieldwork itself could not.
 
-## The workflow
+## The project
 
-`fieldwork-workflow.json.gz` is a Fieldwork workflow document. Import it through Fieldwork's
-import control; it carries its own data, so it runs offline with nothing else fetched.
+`fieldwork-project.json.gz` is a Fieldwork **project document**: an investigation and the
+questions asked of it. Import it through Fieldwork's import control, or open it from the Worked
+examples section of the Project tab. It carries its own data, so it runs offline with nothing
+else fetched.
 
-It computes **deaths per 1,000 people for each of the 32 sub-districts** — Table VIII's counts over
-Table VIII's 1851 population — which is the thing Table IX cannot give you. Table IX's denominator
-is houses, and deaths per house is not a mortality rate.
+It lands as a project with three workflows rather than a loose canvas.
 
-Three widgets: a `table_input` holding Table VIII in long form, a `rate` reading it as a table,
-and a `table_output`. The rate declares what it is a rate of, because Fieldwork refuses to compute
-one otherwise: the numerator covers the seven weeks ending 26 August 1854, the denominator is the
-census of 1851, and the two are three years apart. It reports no rate below a denominator of 1,000
-people.
+### Deaths per 1,000 people, by sub-district
 
-Verified to import and run in both Chromium and WebKit on 2026-10-24. The ranking it produces puts
-St. Olave (6.61), St. James Bermondsey (6.51) and St. Saviour (6.34) at the top and Brixton (0.62),
-Putney (0.19) and Dulwich (0.00) at the bottom — the top four all Southwark and Vauxhall's alone.
-That is Snow's result, at the unit his table is keyed on.
+Table VIII's counts over Table VIII's 1851 population — the thing Table IX cannot give you, whose
+denominator is houses, and deaths per house is not a mortality rate. A `table_input`, a `rate`
+reading it as a table, and a `table_output` that also carries the ranked chart.
+
+The rate declares what it is a rate of, because Fieldwork refuses to compute one otherwise: the
+numerator covers the seven weeks ending 26 August 1854, the denominator is the census of 1851, and
+the two are three years apart. No rate is reported below a denominator of 1,000 people.
+
+St. Olave (6.61), St. James Bermondsey (6.51) and St. Saviour (6.34) lead; Brixton (0.62), Putney
+(0.19) and Dulwich (0.00) trail. The top four are Southwark and Vauxhall's alone.
+
+### The ground: 32 sub-districts
+
+The boundaries, as a study area of **33 parts** — 32 sub-districts, one of which (Streatham)
+carries its Knight's Hill exclave — drawn on a map. 2,182 vertices as published, with each part
+named, and BSD-2 attribution carried on the node rather than left in a file beside it.
+
+Every part shares a border with another. Fieldwork refused that until 2026-10-24: a study area
+would not hold units that touch, which is what administrative units tiling their ground always do.
+
+### Cholera in 1849 compared with 1854
+
+Table XII, both years, by sub-district — the before and after across Lambeth moving its intake
+upstream in 1852.
+
+**Counts, not rates, and deliberately.** A rate needs a denominator for each year and this
+repository holds one population, the 1851 census. Using it for 1849 deaths would assert a frame
+two years out and call the result a rate, which is exactly what the rate widget exists to refuse.
+Snow compared the counts here; so does this.
 
 ## The three dates, which do not agree
 
