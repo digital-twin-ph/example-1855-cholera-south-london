@@ -21,9 +21,9 @@
   },
   "files": [
     {
-      "path": "fieldwork-workflow.json.gz",
-      "sha256": "a69a31dfbec6847304210aa28162e162a2e7f1697655f984cd72d2ad3ae7fcdf",
-      "bytes": 2169
+      "path": "fieldwork-project.json.gz",
+      "sha256": "2a70ca7ddfc7c3153da440b891e8741339be59187cf8680d4a3df77c29f76723",
+      "bytes": 32622
     },
     {
       "path": "data/table-xii-sub-districts-1849-1854.csv",
