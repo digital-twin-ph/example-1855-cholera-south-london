@@ -228,13 +228,18 @@ Table IX already on the canvas: one derives `houses without a death` as `houses`
 the other keeps those two measures and drops `houses`, which is the total the pair partitions.
 The grid that falls out is
 
-| | Deaths | Houses without a death | Total |
-| --- | ---: | ---: | ---: |
-| Southwark and Vauxhall Company | 1,263 | 38,783 | 40,046 |
-| Lambeth Company | 98 | 26,009 | 26,107 |
-| Rest of London | 1,422 | 255,001 | 256,423 |
+| | Deaths | Houses without a death |
+| --- | ---: | ---: |
+| Southwark and Vauxhall Company | 1,263 | 38,783 |
+| Lambeth Company | 98 | 26,009 |
+| Rest of London | 1,422 | 255,001 |
 
-and its row totals are the published house counts, which is the check worth making.
+Each row sums to the published house count — 40,046, 26,107 and 256,423 — which is the check
+worth making, and you have to make it yourself: **the grid draws no margins.** Totals appear only
+where a table states a unit, and Table IX states none, because as imported it mixes houses with
+deaths and a total across those would be meaningless. Keeping the two outcomes makes the
+remaining measures commensurable and nothing in the table records that, so the margins an
+epidemiologist expects are absent by a rule that is right in general and wrong here.
 
 **It rests on an assumption, and the step says so in its own name.** Snow's 1,263 are *deaths*,
 not houses in which a death occurred, so `houses minus deaths` is `houses without a death` only if
