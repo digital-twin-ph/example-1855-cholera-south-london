@@ -301,18 +301,55 @@ The 2×2 is the first and third rows. The middle row is kept rather than discard
 lived where both companies' pipes ran, and that row is the dose-response middle — 5.03, 2.17 and
 0.94 deaths per 1,000, in that order.
 
+**Built in the application, as of 2026-10-26.** Until then this node carried the six counts as
+prepared data, with `bytes: 0` and an empty digest, because Fieldwork could not join one table to
+another on a shared column. It now derives them from the two CSVs this repository already ships,
+in four steps a reader can open:
+
+1. **Relate** Table XII's `water_supply` onto Table VIII's 32 sub-districts, matched on
+   `sub_district` — 32 keys, one to one, no unmatched key in either direction.
+2. **Total within** `water_supply` and `measure`, collapsing 64 rows into six.
+3. **Derive** `survived` as `population_1851` minus `deaths_seven_weeks`.
+4. **Select** the two outcome rows, so the totals partition rather than double-count.
+
+The six counts are identical to the figures that were there before. What changed is that the
+provenance now reaches the printed tables instead of stopping at a hand computation.
+
 **Why this table exists here and not for Table IX.** Survivors are population minus deaths, which
 is a true count only because a person dies at most once. A house can have several deaths, so
-"houses without a death" is unknown and no such table can be built from the per-house figures.
-That is the same fact that makes one comparison a rate and the other a risk.
+"houses without a death" rests on an assumption rather than a count — and the per-house workflow
+*does* derive one, with that assumption written into the node's own label. Read the two together:
+the people table is a count, the houses table is a count **given** at most one death per house.
 
-**Three things that happened outside this application**, stated because a reader should not have
-to infer them. The sub-districts were grouped by the `water_supply` column Table XII **declares**,
-not by where deaths fell. The populations and deaths were summed from Table VIII. And survivors
-were computed by subtraction. Fieldwork cannot yet join one table to another on a shared column,
-nor compute a column from other columns, so this node carries prepared data with its provenance
-stated rather than demonstrating the steps — which is a limitation of the application, not a
-choice about the example.
+**And the difference between 8.40 and 5.35 is the denominator, not the estimand.** It is tempting
+to say the per-house figure is a rate ratio and this one a risk ratio. A risk ratio over the same
+houses is `8.401853429780243` — the rate ratio's value bit for bit, because deaths per house *is* a
+risk under that same assumption, so the two are the same division. Only the intervals differ, and
+only in the second decimal. What moves the number to 5.35 is that the subject becomes a person.
+
+### One company against the other, on people
+
+| | |
+| --- | --- |
+| Risk, Southwark and Vauxhall only | 5.03 per 1,000 |
+| Risk, Lambeth only | 0.94 per 1,000 |
+| **Risk ratio** | **5.35** (3.36 to 8.53, Katz log) |
+| **Odds ratio** | **5.37** (3.37 to 8.57, Wald log) |
+| **Risk difference** | **4.09 per 1,000** (Wald unpooled) |
+
+Every estimate names its interval method, and each carries a field for what Epi Info displays for
+the same quantity which is deliberately **empty** — nobody has read those labels off Epi Info, and
+filling them from memory is how a wrong label enters a teaching context.
+
+Checked against statsmodels to 1e-9, every estimate and every bound, in validation-lab check 30.
+**No agreement with Epi Info is claimed.**
+
+**The middle row is excluded, not controlled for.** The 300,149 people where both companies' pipes
+ran are in neither group of the 2×2, and the application says so on the result. That is Snow's own
+confounding and the reason he went to the house level rather than settling it here. No estimate
+above adjusts for anything.
+
+**The tests are not built.** No chi-square, Mantel-Haenszel, Yates, Fisher exact or mid-P.
 
 ## The three dates, which do not agree
 
