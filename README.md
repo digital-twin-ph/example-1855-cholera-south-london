@@ -149,7 +149,7 @@ questions asked of it. Import it through Fieldwork's import control, or open it 
 examples section of the Project tab. It carries its own data, so it runs offline with nothing
 else fetched.
 
-It lands as a project with three workflows rather than a loose canvas.
+It lands as a project with four workflows rather than a loose canvas.
 
 ### Deaths per 1,000 people, by sub-district
 
@@ -183,6 +183,29 @@ repository holds one population, the 1851 census. Using it for 1849 deaths would
 two years out and call the result a rate, which is exactly what the rate widget exists to refuse.
 Snow compared the counts here; so does this.
 
+### Deaths per 1,000 people, mapped
+
+The first workflow's rates, put onto the second workflow's boundaries and shaded: the choropleth
+this repository argued for in prose until 2026-10-25, when Fieldwork gained a widget that can join
+a table to the named parts of a study area.
+
+**A rate and not a count.** A count would mostly show where people lived, which is the map Snow
+did not need; the denominator is what makes the figure an argument.
+
+The join matches on the sub-district name, ignoring punctuation and spacing. That is not a
+convenience: on the raw published strings only **23 of 32** match, because the table writes
+`St. George, Camberwell` where the boundaries write `St. George  Camberwell`. After folding, all
+32 match exactly, so nothing here needs a similarity threshold.
+
+The figure draws **33 parts for 32 sub-districts** — Streatham is two polygons and both take its
+rate, which is true of a rate and would not be true of a count. Five quantile classes, so each
+holds about the same number of sub-districts and the shade shows rank rather than magnitude; the
+breaks are printed on the figure and are values that occur in the data.
+
+Dulwich sits in the lowest class at 0.00 and Putney at 0.19. Neither is a quiet place on this map
+because cholera spared it; both are small, and a rate over a small denominator is unstable. The
+figure does not say that, and a reader should.
+
 ## The three dates, which do not agree
 
 - **Deaths**: the first seven weeks of the 1854 epidemic (and separately the first four).
@@ -202,11 +225,14 @@ stated, and reports whether they agree — this is the data that machinery was w
 
 ## What this repository does not yet contain
 
-**A way for Fieldwork to read the boundaries.** `geo/sub-districts-csds.geojson` is here and the
-application has no door for it: Fieldwork has no polygon input widget, and nothing in it produces
-polygons from a table, so the 32 sub-districts cannot currently be brought onto a canvas or joined
-to these figures. The georeferenced plate and the supply zones are in the same position. Until
-that changes, the map layers in `geo/` are for other tools, and the workflow below is tabular.
+**A georeferenced plate, and the supply zones.** Those map layers in `geo/` are still for other
+tools: nothing in Fieldwork reads them onto a canvas.
+
+The boundaries are no longer in that position. Until 2026-10-25 this section also said that
+`geo/sub-districts-csds.geojson` had no door into the application and that the 32 sub-districts
+could not be joined to these figures. Both are now false — the boundaries land as a study area of
+33 named parts, and `join_table_to_area` puts the rates onto them. The sentence is recorded here
+rather than deleted because the gap it described is what the join was built to close.
 
 The manifest format by which Fieldwork would list example repositories is not defined yet; see
 experiment 127 in the Fieldwork repository.
