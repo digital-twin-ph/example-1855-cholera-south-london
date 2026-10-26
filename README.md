@@ -234,12 +234,16 @@ The grid that falls out is
 | Lambeth Company | 98 | 26,009 |
 | Rest of London | 1,422 | 255,001 |
 
-Each row sums to the published house count — 40,046, 26,107 and 256,423 — which is the check
-worth making, and you have to make it yourself: **the grid draws no margins.** Totals appear only
-where a table states a unit, and Table IX states none, because as imported it mixes houses with
-deaths and a total across those would be meaningless. Keeping the two outcomes makes the
-remaining measures commensurable and nothing in the table records that, so the margins an
-epidemiologist expects are absent by a rule that is right in general and wrong here.
+Each row sums to the published house count — 40,046, 26,107 and 256,423 — and the grid shows
+those margins, which is the check worth making and the first thing an epidemiologist reads.
+
+**They are shown because the figure was told they could be, not because the table knows.** Totals
+otherwise appear only where a table states a unit, and Table IX states none: as imported it mixes
+houses with deaths, and a total across those would be meaningless. Selecting the two outcomes
+leaves measures that both count houses, and nothing in the table records that — so the output
+carries the claim instead, and says underneath the figure that somebody asserted it. Deaths
+beside houses without a death may be added; deaths beside population may not, and nothing here
+can tell them apart for you.
 
 **It rests on an assumption, and the step says so in its own name.** Snow's 1,263 are *deaths*,
 not houses in which a death occurred, so `houses minus deaths` is `houses without a death` only if
