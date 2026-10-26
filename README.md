@@ -149,7 +149,7 @@ questions asked of it. Import it through Fieldwork's import control, or open it 
 examples section of the Project tab. It carries its own data, so it runs offline with nothing
 else fetched.
 
-It lands as a project with four workflows rather than a loose canvas.
+It lands as a project with five workflows rather than a loose canvas.
 
 ### Deaths per 1,000 people, by sub-district
 
@@ -205,6 +205,54 @@ breaks are printed on the figure and are values that occur in the data.
 Dulwich sits in the lowest class at 0.00 and Putney at 0.19. Neither is a quiet place on this map
 because cholera spared it; both are small, and a rate over a small denominator is unstable. The
 figure does not say that, and a reader should.
+
+### Deaths per house, by water company
+
+Table IX, which is the comparison Snow's argument actually rests on: houses supplied by the
+Southwark and Vauxhall Company against houses supplied by the Lambeth Company, in the same
+streets, in the same weeks.
+
+**Rate ratio 8.40**, with a 95% interval of **6.84 to 10.32**. The interval is a log-normal
+approximation over the event counts, checked against an independent implementation
+(`statsmodels`) in the validation lab — which found, on its first run, that this application had
+been using a rounded 1.9600 for the normal quantile instead of 1.959963984540054.
+
+**The table is the output, not the ratio.** A reader checks a summary against the counts it came
+from, so the step emits the four cells — 1,263 deaths among 40,046 houses, 98 among 26,107 — and
+carries the ratio alongside. The published `deaths_per_10000_houses` column is deliberately not
+imported: it is Snow's own arithmetic, and a workflow that read his answer would be checking
+nothing.
+
+**Why the company is the exposure, which has to be said rather than assumed.** Being a Southwark
+and Vauxhall customer is not what anybody thinks caused cholera. The exposure is **water drawn
+from the reach of the Thames that received London's sewage**, and the company is a *proxy* for
+it: by 1854 the two firms took their water from different places, Lambeth having moved its intake
+upstream in 1852 to draw above the tidal reach, while Southwark and Vauxhall still drew from the
+tidal river into which the city's sewers discharged. Snow's argument is about the water, and the
+company is the label the data happens to carry.
+
+The proxy is a good one for a reason that is also about the setting rather than the data: the two
+companies' pipes ran **intermingled in the same streets**, so their customers were otherwise
+alike — same neighbourhoods, same trades, same houses, often next door to one another. That is
+what makes the comparison worth making, and it is not something any interval can tell you.
+
+So the direction of this comparison encodes a hypothesis. Southwark and Vauxhall is the *compared*
+group because it is the one believed exposed; Lambeth is the *reference* because it had moved
+upstream. Reverse them and the arithmetic gives 0.12, the same finding stated backwards.
+
+*What this repository does not record:* where exactly each intake stood. The move upstream in 1852
+is in the table notes and in Snow's own account; the specific works are not in any file here, so
+nothing above should be read as this repository's evidence for them.
+
+**Per house, and that matters.** A house can have more than one death, so this is a rate and not
+a risk: there is no "house without a death" to count, and the interval is Poisson rather than
+binomial. It is also why this ratio (8.40) differs from the per-person one in the choropleth
+workflow's supply groups (5.35) over the same outbreak — the denominators count different things,
+and both are stated.
+
+One assumption to meet before an audience does: a Poisson interval treats the events as
+independent, and cholera is transmitted. Deaths that cluster are over-dispersed, so this interval
+is narrower than the data warrants.
 
 ## The three dates, which do not agree
 
