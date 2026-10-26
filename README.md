@@ -223,6 +223,28 @@ carries the ratio alongside. The published `deaths_per_10000_houses` column is d
 imported: it is Snow's own arithmetic, and a workflow that read his answer would be checking
 nothing.
 
+**The 2×2 is now built in the application, not prepared for it.** Two steps do it, from the same
+Table IX already on the canvas: one derives `houses without a death` as `houses` minus `deaths`,
+the other keeps those two measures and drops `houses`, which is the total the pair partitions.
+The grid that falls out is
+
+| | Deaths | Houses without a death | Total |
+| --- | ---: | ---: | ---: |
+| Southwark and Vauxhall Company | 1,263 | 38,783 | 40,046 |
+| Lambeth Company | 98 | 26,009 | 26,107 |
+| Rest of London | 1,422 | 255,001 | 256,423 |
+
+and its row totals are the published house counts, which is the check worth making.
+
+**It rests on an assumption, and the step says so in its own name.** Snow's 1,263 are *deaths*,
+not houses in which a death occurred, so `houses minus deaths` is `houses without a death` only if
+no house lost two people. In an epidemic that killed over a thousand people in 40,046 houses that
+is not certain, and the error runs one way: wherever a house lost two, this undercounts the houses
+that escaped. The node is labelled **"Houses without a death · at most one per house"** so the
+assumption travels with the figure rather than living in a footnote. Snow's own argument does not
+need it — his rate is deaths per house, which is why the rate ratio above is a *ratio* of events
+per unit rather than a proportion.
+
 **Why the company is the exposure, which has to be said rather than assumed.** Being a Southwark
 and Vauxhall customer is not what anybody thinks caused cholera. The exposure is **water drawn
 from the reach of the Thames that received London's sewage**, and the company is a *proxy* for
