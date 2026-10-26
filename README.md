@@ -225,7 +225,7 @@ nothing.
 
 **The 2×2 is now built in the application, not prepared for it.** Two steps do it, from the same
 Table IX already on the canvas: one derives `houses without a death` as `houses` minus `deaths`,
-the other keeps those two measures and drops `houses`, which is the total the pair partitions.
+the other selects those two measures and drops `houses`, which is the total the pair partitions.
 The grid that falls out is
 
 | | Deaths | Houses without a death |
