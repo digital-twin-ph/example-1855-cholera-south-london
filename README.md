@@ -149,7 +149,7 @@ questions asked of it. Import it through Fieldwork's import control, or open it 
 examples section of the Project tab. It carries its own data, so it runs offline with nothing
 else fetched.
 
-It lands as a project with five workflows rather than a loose canvas.
+It lands as a project with six workflows rather than a loose canvas.
 
 ### Deaths per 1,000 people, by sub-district
 
@@ -253,6 +253,35 @@ and both are stated.
 One assumption to meet before an audience does: a Poisson interval treats the events as
 independent, and cholera is transmitted. Deaths that cluster are over-dispersed, so this interval
 is narrower than the data warrants.
+
+### Died or survived, by water supply
+
+The contingency table an epidemiologist reads before anything else — categories across the top
+and down the left, totals as a fourth column and a fourth row, **N = 486,936** in the corner.
+
+| supply | died | survived | total |
+| --- | ---: | ---: | ---: |
+| Southwark and Vauxhall only | 844 | 166,810 | 167,654 |
+| both intermingled | 652 | 299,497 | 300,149 |
+| Lambeth only | 18 | 19,115 | 19,133 |
+| **total** | 1,514 | 485,422 | **486,936** |
+
+The 2×2 is the first and third rows. The middle row is kept rather than discarded: 300,149 people
+lived where both companies' pipes ran, and that row is the dose-response middle — 5.03, 2.17 and
+0.94 deaths per 1,000, in that order.
+
+**Why this table exists here and not for Table IX.** Survivors are population minus deaths, which
+is a true count only because a person dies at most once. A house can have several deaths, so
+"houses without a death" is unknown and no such table can be built from the per-house figures.
+That is the same fact that makes one comparison a rate and the other a risk.
+
+**Three things that happened outside this application**, stated because a reader should not have
+to infer them. The sub-districts were grouped by the `water_supply` column Table XII **declares**,
+not by where deaths fell. The populations and deaths were summed from Table VIII. And survivors
+were computed by subtraction. Fieldwork cannot yet join one table to another on a shared column,
+nor compute a column from other columns, so this node carries prepared data with its provenance
+stated rather than demonstrating the steps — which is a limitation of the application, not a
+choice about the example.
 
 ## The three dates, which do not agree
 
