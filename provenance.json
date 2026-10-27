@@ -21,29 +21,9 @@
   },
   "files": [
     {
-      "path": "fieldwork-project.json.gz",
-      "sha256": "2a70ca7ddfc7c3153da440b891e8741339be59187cf8680d4a3df77c29f76723",
-      "bytes": 32622
-    },
-    {
-      "path": "data/table-xii-sub-districts-1849-1854.csv",
-      "sha256": "306ce1eed8f99df9a6008d6a7eff9db8a3f0e06205b2cd0394f9de4c18b37728",
-      "bytes": 2229
-    },
-    {
-      "path": "data/table-viii-sub-districts-seven-weeks.csv",
-      "sha256": "29abb57c8e071995d2b3d2db348fcf74fa1dc0a1007b14630382aa1c3cc17d18",
-      "bytes": 1460
-    },
-    {
-      "path": "data/table-ix-first-seven-weeks.csv",
-      "sha256": "96232f9e6983ac7aeb657cec43ac1ded1e6df2d6d3f3093b704738d730d66605",
-      "bytes": 151
-    },
-    {
-      "path": "data/first-four-weeks.csv",
-      "sha256": "b3d7eb4032fc53d61d6bdbc183e48f55278992c67464abbf79236b21888eb8ae",
-      "bytes": 132
+      "path": "LICENSE",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048
     },
     {
       "path": "NOTICE.txt",
@@ -51,9 +31,59 @@
       "bytes": 4120
     },
     {
-      "path": "LICENSE",
-      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
-      "bytes": 7048
+      "path": "data/first-four-weeks.csv",
+      "sha256": "b3d7eb4032fc53d61d6bdbc183e48f55278992c67464abbf79236b21888eb8ae",
+      "bytes": 132
+    },
+    {
+      "path": "data/table-ix-first-seven-weeks.csv",
+      "sha256": "96232f9e6983ac7aeb657cec43ac1ded1e6df2d6d3f3093b704738d730d66605",
+      "bytes": 151
+    },
+    {
+      "path": "data/table-viii-sub-districts-seven-weeks.csv",
+      "sha256": "29abb57c8e071995d2b3d2db348fcf74fa1dc0a1007b14630382aa1c3cc17d18",
+      "bytes": 1460
+    },
+    {
+      "path": "data/table-xii-sub-districts-1849-1854.csv",
+      "sha256": "306ce1eed8f99df9a6008d6a7eff9db8a3f0e06205b2cd0394f9de4c18b37728",
+      "bytes": 2229
+    },
+    {
+      "path": "fieldwork-project.json.gz",
+      "sha256": "2a70ca7ddfc7c3153da440b891e8741339be59187cf8680d4a3df77c29f76723",
+      "bytes": 32622
+    },
+    {
+      "path": "geo/map2-georeference.json",
+      "sha256": "075e43b53993409903df6bc4035be26a18e2de4c8b3fce3b3b66f9bc2b6163b7",
+      "bytes": 5432
+    },
+    {
+      "path": "geo/map2-large.jgw",
+      "sha256": "813e3edb847f4443c6d0caab7bde56f04a03b57ea73b38137d2fd8f58acc007f",
+      "bytes": 67
+    },
+    {
+      "path": "geo/map2-large.jpg",
+      "sha256": "c5dd7255ddab6cebd960f13f9658a2dba6f7cb8397b3d03963c369d2886b985b",
+      "bytes": 5341773
+    },
+    {
+      "path": "geo/map2-water-supply-zones.geojson",
+      "sha256": "b4feb64448895d9d9acd2b35fb2d3b289a326e842546754e10ec4a42811661fc",
+      "bytes": 10324
+    },
+    {
+      "path": "geo/map2.jgw",
+      "sha256": "69307bf602ccc6821e7a0c126b05bd4892a435c743f3ad20b47e1ce4fc855c94",
+      "bytes": 67
+    },
+    {
+      "path": "geo/map2.jpg",
+      "sha256": "a3131c5fc9ad7605ae1c9b79d58ad3f54baab1cda26bfa176b9a2cfa2cc297f0",
+      "bytes": 260535
     }
   ],
   "limits": [
