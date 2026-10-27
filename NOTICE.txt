@@ -31,6 +31,36 @@ three separate dates these figures carry, and the limits that apply to
 any analysis built on them.
 
 
+THE PLATE ITSELF
+================
+
+geo/map2.jpg and geo/map2-large.jpg are Snow's Map 2, the plate this study is argued
+from: the boundaries of the Registrar-General's districts south of the Thames, with
+the water supply of those districts shown as a colour wash.
+
+Source:   Project Gutenberg eBook #72894
+          https://www.gutenberg.org/cache/epub/72894/images/i_map2.jpg
+          https://www.gutenberg.org/cache/epub/72894/images/i_map2_large.jpg
+Licence:  None applies. The plate is from 1855 and is in the public domain; Project
+          Gutenberg asserts no rights over a scan of a public-domain work.
+Sizes:    1002 x 788 and 5000 x 3934. Both are the same plate, so both share the
+          georeference in geo/map2-georeference.json; map2.jgw places the small one
+          and map2-large.jgw the large.
+
+Stored here on 2026-10-27, having been georeferenced on 2026-10-24 with only its URL
+and digests recorded. Both files match those digests exactly.
+
+Worth recording because it nearly went wrong: two successive downloads of the large
+plate were silently truncated -- 972 kB and then 495 kB of a 5,341,773-byte file --
+and an image tool read the truncated file as a perfectly good 5000 x 3934 JPEG. Only
+the recorded digest said otherwise.
+
+geo/map2-water-supply-zones.geojson is the colour wash traced from that plate, as
+three polygons: the Southwark and Vauxhall territory in blue, the Lambeth territory in
+red, and in purple the area where both companies' pipes are intermingled. The wash is
+a supply TERRITORY and not the course of any pipe, and the purple zone is the whole of
+Snow's design.
+
 THIRD-PARTY FILE
 ================
 
