@@ -271,9 +271,23 @@ So the direction of this comparison encodes a hypothesis. Southwark and Vauxhall
 group because it is the one believed exposed; Lambeth is the *reference* because it had moved
 upstream. Reverse them and the arithmetic gives 0.12, the same finding stated backwards.
 
-*What this repository does not record:* where exactly each intake stood. The move upstream in 1852
-is in the table notes and in Snow's own account; the specific works are not in any file here, so
-nothing above should be read as this repository's evidence for them.
+*What this repository records, and at what precision.* The `south-london/ground` workflow now
+carries the three Thames sites Snow names, as a point layer:
+
+| company | drawn from | when | the point marks |
+| --- | --- | --- | --- |
+| Southwark and Vauxhall | Thames at Battersea Fields | by 1849, still in 1854 | Vauxhall Bridge; the works stood about half a mile upstream |
+| Lambeth | Thames opposite Hungerford Market | until 1852 | Hungerford Bridge, at the market's site |
+| Lambeth | Thames at Thames Ditton | from 1852 | Thames Ditton village, the place Snow names |
+
+**These are landmarks, not surveyed works.** Snow locates the intakes by relation — *"about half a
+mile above Vauxhall Bridge"*, *"opposite Hungerford Market"* — and each point marks the named
+landmark with his sentence recorded beside it. Nothing here claims a precision the source does not
+have, and the specific works are still not surveyed in any file.
+
+Thames Ditton sits 6.2 km west of the study area's western edge, which is why it cannot appear on
+Map 2 whatever Snow drew: the plate stops at -0.2391. The move upstream is the variable that makes
+this a natural experiment, and until now it had no spatial representation at all.
 
 **Per house, and that matters.** A house can have more than one death, so this is a rate and not
 a risk: there is no "house without a death" to count, and the interval is Poisson rather than
