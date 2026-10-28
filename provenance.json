@@ -11,7 +11,24 @@
     "stated": "None. The publication is 1855 and is in the public domain; the figures are facts.",
     "transcription": "CC0-1.0",
     "shippedWithData": true,
-    "note": "Chosen deliberately. The same figures sit inside HistData (GPL) and causaldata (MIT); taking them from a digitisation adopts that digitisation's terms for data that is otherwise unencumbered. Transcribed from the original, this repository inherits nothing and can be used by a project under any licence."
+    "note": "Chosen deliberately. The same figures sit inside HistData (GPL) and causaldata (MIT); taking them from a digitisation adopts that digitisation's terms for data that is otherwise unencumbered. Transcribed from the original, this repository inherits nothing and can be used by a project under any licence.",
+    "thirdParty": [
+      {
+        "files": [
+          "geo/sub-districts-csds.geojson"
+        ],
+        "licence": "BSD-2-Clause",
+        "note": "Redistributed unmodified. See NOTICE.txt."
+      },
+      {
+        "files": [
+          "geo/thames-reaches.geojson",
+          "geo/thames-tidal-limit.geojson"
+        ],
+        "licence": "ODbL-1.0",
+        "note": "Derived from OpenStreetMap, (c) OpenStreetMap contributors. SHARE-ALIKE: a Derivative Database must be offered under the ODbL, and a Produced Work must credit the contributors. This is the only share-alike obligation in this repository, and it does not reach the CC0 content: the two files are additions beside it, not derived from it nor it from them. See NOTICE.txt for what was taken and what was done to it."
+      }
+    ]
   },
   "dates": {
     "numeratorPeriod": "1854-07-08/1854-08-26 for Table IX, the first seven weeks of the epidemic; 1854-07-08/1854-08-05 for the four-week figures. Snow states the periods as weeks of the epidemic rather than as calendar dates, and the dates given here are the conventional reading of them, not his words.",
@@ -91,7 +108,8 @@
     "The two companies' mains ran down the same streets and their customers were intermixed house by house, which is the study's strength as a natural experiment and the reason a sub-district or company-level rate is not an individual's risk. The ecological fallacy is live here.",
     "Snow records that water supply remained unascertained in a number of cases, because residents often did not know their supplier; he assigned exposure by a chloride test where he could. The counts are therefore of ascertained supply.",
     "Rest of London is not a control group. It is everything else, including households served by neither company.",
-    "There is no geography in this repository. Mapping these figures needs 1850s registration sub-district boundaries, which are a separate acquisition with their own licence."
+    "There is no geography in this repository. Mapping these figures needs 1850s registration sub-district boundaries, which are a separate acquisition with their own licence.",
+    "The Thames reaches in geo/ are MODERN BANKS and this study is of 1854. The Victoria Embankment narrowed the central river from 1865, so the tidal reach drawn is not the one the intakes stood on. What the two polygons carry faithfully is the tidal/non-tidal DISTINCTION -- which is the exposure Snow argues from -- and not the river’s 1854 shape. The limit line between them is OpenStreetMap’s own edge at Teddington Lock, 388 m from the lock point this repository carries; those two are not the same position and neither is adjusted to the other."
   ],
   "verification": {
     "independentSources": [

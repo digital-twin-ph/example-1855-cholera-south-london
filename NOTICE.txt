@@ -61,6 +61,74 @@ red, and in purple the area where both companies' pipes are intermingled. The wa
 a supply TERRITORY and not the course of any pipe, and the purple zone is the whole of
 Snow's design.
 
+OPENSTREETMAP FILES
+===================
+
+geo/thames-reaches.geojson and geo/thames-tidal-limit.geojson are NOT part of this
+repository's CC0 dedication. They are derived from OpenStreetMap and are therefore
+licensed under the Open Database License, which is SHARE-ALIKE: a work derived from
+them must be offered under the same terms.
+
+Source:   OpenStreetMap contributors, via the Geofabrik "greater-london" extract
+          (greater-london.osm.pbf, 129,796,300 bytes, retrieved 2026-10-22).
+          https://www.openstreetmap.org/copyright
+Licence:  Open Database License v1.0 (ODbL). The data is (c) OpenStreetMap
+          contributors. Any Produced Work must credit them; any Derivative
+          Database must be offered under the ODbL.
+          https://opendatacommons.org/licenses/odbl/1-0/
+
+What was taken, and what was done to it:
+
+  Seven water-area multipolygon relations -- 28934, 308126, 318374, 2110237,
+  3295636, 4028190 and 16570637 -- assembled from their member ways into closed
+  rings, PARTITIONED into two reaches, then CLIPPED to the study area's bounding
+  box. Nothing was simplified or reprojected and no vertex was moved; six of the
+  seven relations survive the clip, and relation 2110237, the reach above Thames
+  Ditton at Hampton and Molesey, falls outside the box entirely. Each reach
+  records which relations it kept and which were clipped away.
+
+  THE BOX IS THE STUDY AREA'S, with a 5,000 m margin, which is how acquisition is
+  already scoped in this application: set_bbox(geometryBounds(boundary) +/- marginM).
+  The 32 sub-districts lie inside it by construction, a polygon being within its own
+  bounds. The margin is 5,000 m rather than the 2,000 m that osmQuery permits because
+  Teddington Lock needs 4,460 m and Thames Ditton 4,833 m: that cap bounds an Overpass
+  REQUEST, and street-engine.ts applies its margin uncapped because reading a local
+  extract costs a file read instead. The clip was made here rather than in a workflow
+  step, because no widget clips polygons -- clip_points_to_area takes points. So this
+  clip has no receipt inside the application and is recorded in this file and in each
+  feature's own properties instead.
+
+  THE DIVISION IS OPENSTREETMAP'S OWN, which is the point worth recording. The
+  intention was to cut one waterway polygon at the tidal limit. It proved
+  unnecessary: relations 308126 and 318374 already SHARE 16 VERTICES spanning 194 m
+  -- the width of the river -- 388 m from the Teddington Lock point this repository
+  carries. OpenStreetMap divides the water area at the lock, because a lock is a
+  structure that interrupts it. So geo/thames-tidal-limit.geojson is that shared
+  edge, copied, not a line drawn here; and the two reaches are the relations joined
+  to either side of it, found by shared vertices alone.
+
+  One relation, 16570637, touches neither side. It is placed in the non-tidal reach
+  by its nearest centreline node, 1003 m away and tagged tidal=no. That single
+  assignment rests on proximity rather than on topology.
+
+  Relation 318374 covers Teddington to Richmond and carries NO tidal tag, while
+  relation 28934 below it carries tidal=yes. The absent tag was at first read as
+  OpenStreetMap placing the limit 3403 m downstream, at Richmond. It is not: it is
+  a missing tag, and the reach is placed by what it is joined to.
+
+Vintage:  THESE ARE MODERN BANKS, and the study is of 1854. The Victoria Embankment
+          narrowed the central river from 1865, so the tidal reach drawn here is not
+          the one Snow's intakes stood on. The reaches carry the tidal/non-tidal
+          DISTINCTION faithfully and the river's 1854 shape not at all. A machined
+          note records this under Discussion as a limitation.
+
+Checked:  The three water-works points this repository carries each fall on the side
+          the repository claims -- Southwark and Vauxhall at Battersea Fields and
+          Lambeth at Hungerford in the tidal reach, Lambeth at Thames Ditton in the
+          non-tidal -- which is an independent test of a claim the README records as
+          this repository's own, since Snow names Teddington but no boundary.
+
+
 THIRD-PARTY FILE
 ================
 
