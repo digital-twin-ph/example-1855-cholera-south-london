@@ -285,9 +285,28 @@ mile above Vauxhall Bridge"*, *"opposite Hungerford Market"* — and each point 
 landmark with his sentence recorded beside it. Nothing here claims a precision the source does not
 have, and the specific works are still not surveyed in any file.
 
+A fourth point marks **Teddington Lock, the tidal limit**, because that is what the move was for.
+Below Teddington the flood tide carries water upstream twice a day, so sewage discharged in London
+passes an intake again and again; above it the river runs one way and nothing discharged in London
+reaches an intake at all. Battersea and Hungerford are well below the limit; Thames Ditton is above
+it. That is what *"quite free from the sewage of London"* means, and Parliament drew the same line
+— the Metropolis Water Act 1852 forbade domestic abstraction from the **tidal** Thames after
+31 August 1855.
+
+So the exposure is a **threshold, not a distance**: Lambeth crossed a physical boundary in 1852 and
+Southwark and Vauxhall did not. Snow states the criterion himself, of a different company — the
+East London Company moved to the Lea *"above Lea Bridge, out of the influence of the tide and free
+from sewage"*. He does not name Teddington; that this is where the line falls is this repository's
+claim, recorded as such on the point.
+
 Thames Ditton sits 6.2 km west of the study area's western edge, which is why it cannot appear on
 Map 2 whatever Snow drew: the plate stops at -0.2391. The move upstream is the variable that makes
 this a natural experiment, and until now it had no spatial representation at all.
+
+*What still cannot be drawn:* the tidal reach itself. A waterway is a polygon — OpenStreetMap
+carries the Thames as water polygons — so this needs the same thing the water-supply zones need: a
+polygon layer read from a file, as a layer rather than as the study frame. No widget reads one; see
+[experiment 145](https://github.com/digital-twin-ph/fieldwork/blob/main/docs/experiments/145-polygons-as-a-source.md).
 
 **Per house, and that matters.** A house can have more than one death, so this is a rate and not
 a risk: there is no "house without a death" to count, and the interval is Poisson rather than
