@@ -1,0 +1,102 @@
+{
+  "schema": "fieldwork/quoted-notes/1",
+  "harvested": "2026-10-27",
+  "source": {
+    "citation": {
+      "type": "book",
+      "authors": [
+        {
+          "family": "Snow",
+          "given": "John"
+        }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+    },
+    "published": "1855",
+    "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+    },
+    "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+    "sha256": "8269bfd70fced302b136966707112d455169f2bdb4d5a40229c23c20ecb88669",
+    "licence": "none-applies"
+  },
+  "verification": "Flatten the source’s line wrapping to single spaces and search for each quote. Every one is verbatim; none is paraphrased, elided or joined.",
+  "notes": [
+    {
+      "id": "snow-ready-made-experiment",
+      "kind": "quoted",
+      "section": "Introduction",
+      "fn": "purpose",
+      "establishes": "That the comparison was a natural experiment, not a designed one.",
+      "quote": "As there is no difference whatever, either in the houses or the people receiving the supply of the two Water Companies, or in any of the physical conditions with which they are surrounded, it is obvious that no experiment could have been devised which would more thoroughly test the effect of water supply on the progress of cholera than this, which circumstances placed ready made before the observer. The experiment, too, was on the grandest scale."
+    },
+    {
+      "id": "snow-grandest-scale",
+      "kind": "quoted",
+      "section": "Introduction",
+      "fn": "background",
+      "establishes": "The scale of the population under comparison.",
+      "quote": "The experiment, too, was on the grandest scale. No fewer than three hundred thousand people of both sexes, of every age and occupation, and of every rank and station, from gentlefolks down to the very poor, were divided into two groups without their choice, and, in most cases, without their knowledge; one group being supplied with water containing the sewage of London, and, amongst it, whatever might have come from the cholera patients, the other group having water quite free from such impurity."
+    },
+    {
+      "id": "snow-intimate-mixing",
+      "kind": "quoted",
+      "section": "Methods",
+      "fn": "method",
+      "establishes": "Why supply is independent of the household: the two companies’ pipes run down the same streets, so neighbours differ. This is what Map 2’s purple zone shows.",
+      "quote": "In the sub-districts enumerated in the above table as being supplied by both Companies, the mixing of the supply is of the most intimate kind. The pipes of each Company go down all the streets, and into nearly all the courts and alleys. A few houses are supplied by one Company and a few by the other, according to the decision of the owner or occupier at that time when the Water Companies were in active competition."
+    },
+    {
+      "id": "snow-chloride-test",
+      "kind": "quoted",
+      "section": "Methods",
+      "fn": "method",
+      "establishes": "How exposure was determined where the resident could not say which company supplied them: a chemical test on the water itself.",
+      "quote": "Indeed, the difference in appearance on adding nitrate of silver to the two kinds of water was so great, that they could be at once distinguished without any further trouble. Therefore when the resident could not give clear and conclusive evidence about the Water Company, I obtained some of the water in a small phial, and wrote the address on the cover, when I could examine it after coming home."
+    },
+    {
+      "id": "snow-intake-southwark-vauxhall",
+      "kind": "quoted",
+      "section": "Methods",
+      "fn": "source",
+      "establishes": "Where the Southwark and Vauxhall Company drew its water.",
+      "quote": "The water works at London Bridge were abolished, and the united company derived their supply from the Thames at Battersea Fields, about half a mile above Vauxhall Bridge. The Lambeth Water Company continued to obtain their supply opposite to Hungerford Market; but they had established a small reservoir at Brixton."
+    },
+    {
+      "id": "snow-intake-lambeth-move",
+      "kind": "quoted",
+      "section": "Methods",
+      "fn": "source",
+      "establishes": "That the Lambeth Company moved its intake upstream in 1852, which is the variable the comparison turns on.",
+      "quote": "The Lambeth Company removed their water works, in 1852, from opposite Hungerford Market to Thames Ditton; thus obtaining a supply of water quite free from the sewage of London."
+    },
+    {
+      "id": "snow-tidal-limit-teddington",
+      "kind": "quoted",
+      "section": "Discussion",
+      "fn": "background",
+      "establishes": "That Teddington Lock is the tidal boundary, and the mechanism below it: the river is a prolonged lake and the same water passes twice.",
+      "quote": "The Thames in London is a very large body of water, and if the whole of it flowed away into the sea every day, the liquid which flows down the sewers in twelve hours would form but a very small part of it; but it must be remembered that the quantity of water which passes out to sea, with the ebb of every tide, is only equal to that which flows over Teddington Lock, and from a few small tributary streams. In hot dry weather this quantity is moreover greatly diminished by the evaporation taking place from the immense surface of water exposed between Richmond and Gravesend, so that the river becomes a kind of prolonged lake, the same water passing twice a day to and fro through London, and receiving the excrement of its two millions and more of inhabitants, which keeps accumulating till there is a fall of rain."
+    },
+    {
+      "id": "snow-lambeth-above-teddington",
+      "kind": "quoted",
+      "section": "Discussion",
+      "fn": "background",
+      "establishes": "That the Lambeth Company’s supply was taken ABOVE Teddington Lock — Snow placing the company on the non-tidal side of the boundary he names.",
+      "quote": "Works are in progress for supplying a great part of London with water from the Thames, obtained, like that of the Lambeth Company, above Teddington Lock."
+    },
+    {
+      "id": "snow-map-2-purpose",
+      "kind": "quoted",
+      "section": "Methods",
+      "fn": "source",
+      "establishes": "What Map 2 is for, in Snow’s words: the supply territories and the zone where the two companies are intermingled.",
+      "quote": "The sub-districts of Kent Road and Borough Road, which suffered severely from cholera, are supplied, through a great part of their extent, exclusively by the Southwark and Vauxhall Company; the supply of the Lambeth Company being intermingled with that of the other only in a part of these districts, as may be seen by consulting the accompanying map (No."
+    }
+  ]
+}
