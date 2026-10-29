@@ -155,7 +155,14 @@ It lands as a project with six workflows rather than a loose canvas.
 
 Table VIII's counts over Table VIII's 1851 population — the thing Table IX cannot give you, whose
 denominator is houses, and deaths per house is not a mortality rate. A `table_input`, a `rate`
-reading it as a table, and a `table_output` that also carries the ranked chart.
+reading it as a table, a `table_output` ranking the 32 rates, and a `chart_output` drawing them as
+bars.
+
+The bars are the rate's own chart rather than a count of rows, so they carry what the rate knows:
+the caption states that the numerator and the denominator come from different vintages, and any
+sub-district whose denominator fell below the minimum would be named as unreported rather than
+drawn at zero. Each bar is the rate itself — 32 sub-districts, 32 distinct values — and the axis
+is titled with the unit the table declares, per 1,000 people.
 
 The rate declares what it is a rate of, because Fieldwork refuses to compute one otherwise: the
 numerator covers the seven weeks ending 26 August 1854, the denominator is the census of 1851, and
