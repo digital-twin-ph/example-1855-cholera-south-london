@@ -132,6 +132,14 @@ and causaldata (MIT), and taking them from either would have adopted that digiti
 for data that is otherwise unencumbered. Transcribing from the original inherits nothing, so
 this repository can be used by a project under any licence. The transcription itself is CC0.
 
+**Every input the worked example uses is a file in this repository.** That is the test the
+practitioner set on 2026-10-29: *"I should be able to download all the input data, start from a
+blank canvas and recreate the example from scratch."* `geo/water-intakes.geojson` was written
+that day for that reason -- the three Thames sites the two companies drew from and the tidal
+limit at Teddington Lock lived only inside `fieldwork-project.json.gz`, so the one layer a
+reader could not download was the one that answers which company's water a sub-district drank.
+The file carries the same four features the bundle does, byte for byte.
+
 **One file is an exception, and it is the one that makes the maps work.**
 `geo/sub-districts-csds.geojson` carries the 32 sub-district polygons and is redistributed
 unmodified under the **BSD 2-Clause Licence**, Copyright (c) 2019 Thomas Coleman. Everything else
