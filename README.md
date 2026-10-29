@@ -171,11 +171,21 @@ the two are three years apart. No rate is reported below a denominator of 1,000 
 St. Olave (6.61), St. James Bermondsey (6.51) and St. Saviour (6.34) lead; Brixton (0.62), Putney
 (0.19) and Dulwich (0.00) trail. The top four are Southwark and Vauxhall's alone.
 
-### The ground: 32 sub-districts
+### The ground: an extent, its sub-districts and the river
 
-The boundaries, as a study area of **33 parts** — 32 sub-districts, one of which (Streatham)
-carries its Knight's Hill exclave — drawn on a map. 2,182 vertices as published, with each part
-named, and BSD-2 attribution carried on the node rather than left in a file beside it.
+**A study area is a frame, and a layer is many attributed features.** This workflow was built the
+other way round — the 32 sub-districts *were* the study area — and that made the frame carry 33
+parts, 2,182 vertices and a per-part attribution, while the river and the sub-districts could not
+be told apart as layers because one of them was the ground itself.
+
+It now reads as what it is. The **study extent** is the bounding box enclosing the sub-districts,
+−0.2594, 51.4117 to −0.0313, 51.5086, derived here from their published boundaries and attributed
+to nothing: it is a frame. The **32 registration sub-districts** are a polygon layer, 2,182
+vertices as published, named by `subdist`, carrying the BSD-2 attribution that belongs to the
+boundaries themselves. The **Thames above and below the tidal limit** is a second polygon layer.
+Both are collected with **Collect polygon layers**, largest first so the river draws over the
+sub-districts, and the map draws them over the extent with the four points — the three water
+intakes and Teddington Lock — on top.
 
 Every part shares a border with another. Fieldwork refused that until 2026-10-24: a study area
 would not hold units that touch, which is what administrative units tiling their ground always do.
