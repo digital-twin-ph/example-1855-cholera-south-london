@@ -157,7 +157,7 @@ questions asked of it. Import it through Fieldwork's import control, or open it 
 examples section of the Project tab. It carries its own data, so it runs offline with nothing
 else fetched.
 
-It lands as a project with seven workflows rather than a loose canvas.
+It lands as a project with eight workflows rather than a loose canvas.
 
 ### Deaths per 1,000 people, by sub-district
 
@@ -435,6 +435,47 @@ confounding and the reason he went to the house level rather than settling it he
 above adjusts for anything.
 
 **The tests are not built.** No chi-square, Mantel-Haenszel, Yates, Fisher exact or mid-P.
+
+### The river as it runs: the Thames, the sub-districts and the intakes
+
+The second workflow's map stops the Thames at the edge of the sub-districts, which is where the
+study extent stops. The river does not. This workflow reads it again on a box wide enough to hold
+the whole tidal reach the study turns on — Teddington Lock in the west, where the tide stops, and
+past Greenwich in the east — and draws the sub-districts and the four points on it.
+
+**Built by hand from the palette, which is the point.** Every worked example here should be
+reproducible from an empty canvas with nothing but the widgets, and this one was: a study area,
+a polygon layer, two inputs imported from the second workflow, a collection and a map. Six nodes,
+six connections, no file authored by anybody.
+
+**The box is a study area, not a setting.** `polygon_input` reads inside whatever area is wired
+to it, so the extent is a node you can see on the canvas: −0.34, 51.38 to 0.03, 51.52. It is the
+same box the river is cut to, so the frame and the clip cannot disagree.
+
+**What the read returned, and what was done to it.** The Greater London extract of 2026-10-28
+yielded **866 water features** inside the box and dropped 2,559 that fell outside it. Of the 866,
+**859 were set aside** — ponds, docks, basins, reservoirs, a boating lake, the Lea and the Wandle
+— and **seven river reaches were merged into one** polygon of 10,513 vertices, then **cut to the
+box**. Which seven is a judgement made by looking at them, which is what the feature viewer is
+for: the Thames in OpenStreetMap is not one object and carries no name on its banks, so no
+property you could filter on tells you which of 52 `water=river` features is the river you mean.
+
+All four of those are declarations on the node, not edits to the data. The read is kept whole
+behind its digest and the set-aside, the merge, the rename and the clip are replayed on every
+run — so a reader can undo any of them and see what was there, and the receipt says what was cut
+rather than leaving it to have happened quietly on the way in.
+
+**The sub-districts and the intakes are the second workflow's, reused rather than read again.**
+Both arrive through the palette's *From this project* group, which keeps one copy of the data for
+the project and gives this workflow its own node, label and position.
+
+**This river is not Snow's river.** OpenStreetMap draws the Thames as it is now, and the banks
+below Westminster are not where they were in 1854: the Victoria, Albert and Chelsea Embankments
+were built between 1865 and 1874 and took hundreds of feet of foreshore on both sides. The
+sub-district boundaries are 1851 and the intakes are 1854. **The river under them is modern**,
+and it is here as context — to show where the tidal reach runs and which side of Teddington each
+intake sat on — not as the shoreline anybody drew water from. Snow's own Map 2, in the seventh
+workflow, is the 1855 drawing.
 
 ## The three dates, which do not agree
 
