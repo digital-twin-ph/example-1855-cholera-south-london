@@ -61,6 +61,40 @@ red, and in purple the area where both companies' pipes are intermingled. The wa
 a supply TERRITORY and not the course of any pipe, and the purple zone is the whole of
 Snow's design.
 
+OPENSTREETMAP DATA INSIDE fieldwork-project.json.gz
+===================================================
+
+From 2026-10-31 the project document itself carries OpenStreetMap data, which it did
+not before. The eighth workflow, "The river as it runs", holds a read of the Greater
+London extract on the node that made it, so the cleanup can be replayed rather than
+taken on trust. That makes fieldwork-project.json.gz a Derivative Database in part, and
+the ODbL's share-alike terms reach it.
+
+Source:   OpenStreetMap contributors, via the Geofabrik "greater-london" extract
+          (greater-london-261028.osm.pbf, 129,877,457 bytes, retrieved 2026-10-28).
+          https://www.openstreetmap.org/copyright
+Licence:  Open Database License v1.0 (ODbL). The data is (c) OpenStreetMap
+          contributors. Any Produced Work made from it -- a figure, a map in a paper --
+          must credit them; any Derivative Database must be offered under the ODbL.
+          https://opendatacommons.org/licenses/odbl/1-0/
+
+What was taken, and what was done to it:
+
+  Water areas intersecting -0.34, 51.38 to 0.03, 51.52: 866 features kept, 2,559
+  dropped as outside the box. Nothing was simplified or reprojected and no vertex was
+  moved. All 866 are carried, with the node recording four decisions replayed on every
+  run: 859 features set aside, seven river reaches merged into one, that one renamed,
+  and the result cut to the box. The retrieval record on the node carries the extract's
+  byte count and digest, the box, the kinds requested and the counts dropped.
+
+  THE RIVER IS MODERN, AND THE STUDY IS NOT. These banks are today's. The Victoria,
+  Albert and Chelsea Embankments were built between 1865 and 1874 and took hundreds of
+  feet of foreshore on both sides, so below Westminster this is not the 1854 shoreline.
+  It is carried as context -- where the tidal reach runs, and which side of Teddington
+  each intake sat on -- and not as water anybody drew from. Snow's own Map 2 of 1855 is
+  in the seventh workflow.
+
+
 OPENSTREETMAP FILES
 ===================
 
@@ -94,9 +128,12 @@ What was taken, and what was done to it:
   Teddington Lock needs 4,460 m and Thames Ditton 4,833 m: that cap bounds an Overpass
   REQUEST, and street-engine.ts applies its margin uncapped because reading a local
   extract costs a file read instead. The clip was made here rather than in a workflow
-  step, because no widget clips polygons -- clip_points_to_area takes points. So this
-  clip has no receipt inside the application and is recorded in this file and in each
-  feature's own properties instead.
+  step, because at the time no widget clipped polygons -- clip_points_to_area takes
+  points. So this clip has no receipt inside the application and is recorded in this
+  file and in each feature's own properties instead. THAT IS NO LONGER TRUE of the
+  application: from 2026-10-31 the polygon layer's feature viewer clips to the read's
+  own box as a declared parameter, with a receipt, and the eighth workflow does it that
+  way. These two files are left as they are, because they are what was published.
 
   THE DIVISION IS OPENSTREETMAP'S OWN, which is the point worth recording. The
   intention was to cut one waterway polygon at the tidal limit. It proved
