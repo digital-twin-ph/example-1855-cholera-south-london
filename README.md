@@ -469,6 +469,13 @@ rather than leaving it to have happened quietly on the way in.
 Both arrive through the palette's *From this project* group, which keeps one copy of the data for
 the project and gives this workflow its own node, label and position.
 
+**The four points are named on the figure**, which no static map in Fieldwork could do until
+2026-10-31. The property that names them is nominated rather than guessed — `name` here — and
+there is a ceiling: a layer with more than 24 drawn marks is left unnamed, because a figure that
+printed two hundred and fifty names is one nobody can read. Overlapping labels are not moved out
+of each other's way; this names a handful of marks on a publication figure and is not a
+label-placement engine.
+
 **This river is not Snow's river.** OpenStreetMap draws the Thames as it is now, and the banks
 below Westminster are not where they were in 1854: the Victoria, Albert and Chelsea Embankments
 were built between 1865 and 1874 and took hundreds of feet of foreshore on both sides. The
