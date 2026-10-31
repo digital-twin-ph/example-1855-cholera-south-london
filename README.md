@@ -157,7 +157,7 @@ questions asked of it. Import it through Fieldwork's import control, or open it 
 examples section of the Project tab. It carries its own data, so it runs offline with nothing
 else fetched.
 
-It lands as a project with six workflows rather than a loose canvas.
+It lands as a project with seven workflows rather than a loose canvas.
 
 ### Deaths per 1,000 people, by sub-district
 
@@ -197,6 +197,33 @@ intakes and Teddington Lock — on top.
 
 Every part shares a border with another. Fieldwork refused that until 2026-10-24: a study area
 would not hold units that touch, which is what administrative units tiling their ground always do.
+
+### Snow's Map 2, 1855, as published
+
+The plate on its own: a `map_image_input` carrying the 1,002 × 788 scan from Project Gutenberg's
+edition, a `study_area` that is the plate's own georeferenced extent, and a `map_output` drawing
+the one under the other. Nothing is computed here and nothing is joined. It exists so the plate
+can be read as a figure in its own right rather than only as the ground under the choropleth,
+and so a write-up can place it where a reader meets the argument — the washes are what Snow's
+design looks like before any number is quoted.
+
+The extent is read off `geo/map2.jgw` and the image's pixel dimensions, −0.2391, 51.4063 to
+−0.0109, 51.5182. It is a frame for drawing the plate whole, not a published boundary, and
+nothing is attributed to it. The placement is the one in `geo/map2-georeference.json`, with that
+file's control points and both digests; it is **not** independently checked here, and an
+alignment error would look exactly like a correct placement.
+
+The blue and the red washes are the two companies' supply territories and the purple is the zone
+where both companies' pipes are intermingled, which is the whole of Snow's design. The drawing
+says none of that — the figure's subtitle does, and a reader needs it.
+
+**A plate is ink, not measurement.** At 1,002 × 788 over this extent one pixel is about 15.8 m on
+the ground: legible as ground, and not a basis for reading a street. Fieldwork enforces the
+distinction by port type rather than by advice — a plate connects to a map's `ground` and cannot
+be connected to anything that samples or clips a raster.
+
+The plate is carried once. Both this workflow and the choropleth reference the same image by
+digest, so importing the project writes one copy of it rather than two.
 
 ### Cholera in 1849 compared with 1854
 
@@ -428,8 +455,13 @@ stated, and reports whether they agree — this is the data that machinery was w
 
 ## What this repository does not yet contain
 
-**A georeferenced plate, and the supply zones.** Those map layers in `geo/` are still for other
-tools: nothing in Fieldwork reads them onto a canvas.
+**The supply zones.** `geo/map2-water-supply-zones.geojson` is still for other tools: nothing in
+Fieldwork reads it onto a canvas.
+
+The plate is no longer in that position. Until 2026-10-27 this section read "a georeferenced
+plate, and the supply zones", and both were true: the repository carried `geo/map2.jgw`,
+`geo/map2-large.jgw` and `geo/map2-georeference.json` with nothing able to read them. The plate
+now draws as ground under the choropleth and as a figure of its own.
 
 The boundaries are no longer in that position. Until 2026-10-25 this section also said that
 `geo/sub-districts-csds.geojson` had no door into the application and that the 32 sub-districts
