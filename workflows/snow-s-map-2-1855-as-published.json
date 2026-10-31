@@ -1,0 +1,204 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "id": "sl-plate",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w3",
+ "name": "Snow’s Map 2, 1855, as published",
+ "nodes": [
+  {
+   "id": "plate-extent",
+   "type": "study_area",
+   "x": 60,
+   "y": 60,
+   "params": {
+    "source": "drawn",
+    "selectionMode": "bbox",
+    "label": "Snow’s Map 2, the plate’s own extent",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -0.23909730408250002,
+        51.4062506533125
+       ],
+       [
+        -0.010918091552500037,
+        51.4062506533125
+       ],
+       [
+        -0.010918091552500037,
+        51.5181918537805
+       ],
+       [
+        -0.23909730408250002,
+        51.5181918537805
+       ],
+       [
+        -0.23909730408250002,
+        51.4062506533125
+       ]
+      ]
+     ]
+    },
+    "provenance": {
+     "what": "The extent of Snow’s Map 2 as georeferenced, read off the world file geo/map2.jgw and the plate’s pixel dimensions. It is a frame for drawing the plate whole rather than a published boundary, and nothing is attributed to it.",
+     "source": "Derived in Fieldwork from the plate’s world file",
+     "retrievedAt": "2026-10-31"
+    },
+    "spatialReference": {
+     "datum": "WGS84",
+     "geodeticCRS": "EPSG:4326",
+     "geometryCRS": "OGC:CRS84",
+     "axisOrder": "longitude-latitude",
+     "units": "degree"
+    }
+   }
+  },
+  {
+   "id": "plate",
+   "type": "map_image_input",
+   "x": 60,
+   "y": 260,
+   "params": {
+    "label": "Snow’s Map 2, 1855",
+    "image": {
+     "width": 1002,
+     "height": 788,
+     "bytes": 260535,
+     "sha256": "a3131c5fc9ad7605ae1c9b79d58ad3f54baab1cda26bfa176b9a2cfa2cc297f0",
+     "filename": "map2.jpg"
+    },
+    "bounds": [
+     -0.23909730408250002,
+     51.4062506533125,
+     -0.010918091552500037,
+     51.5181918537805
+    ],
+    "opacity": 0.85,
+    "source": {
+     "title": "John Snow, Map 2, 1855",
+     "url": "https://www.gutenberg.org/cache/epub/72894/images/i_map2.jpg",
+     "licence": "none-applies",
+     "note": "The blue, red and purple washes are the supply territories; the purple is the zone where both companies’ pipes are intermingled, which is the whole of Snow’s design."
+    },
+    "provenance": {
+     "what": "Snow’s Map 2 of 1855, the plate showing which company supplied which part of south London",
+     "citation": {
+      "type": "map",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "Map 2",
+      "container": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-27",
+     "represents": "1854",
+     "url": "https://www.gutenberg.org/cache/epub/72894/images/i_map2.jpg",
+     "licence": "none-applies",
+     "licenceSource": "An 1855 publication: the work is in the public domain, which is a positive claim that no terms attach rather than an absence of information.",
+     "note": "Georeferenced north-up from four control points whose coordinates were obtained from OpenStreetMap via Nominatim, © OpenStreetMap contributors, ODbL. Four coordinates are not a substantial extract, so no share-alike obligation is asserted; the attribution is recorded because the figures came from somewhere. The plate is INK, NOT MEASUREMENT: sampling its pixels returns the colour of a line."
+    },
+    "dataRef": "06fad4bd3e72e6f5b597bc53a2945c593ed8bb7cb41be1464ce184a197daefcf",
+    "dataFrom": {
+     "path": "geo/map2.jpg",
+     "sha256": "a3131c5fc9ad7605ae1c9b79d58ad3f54baab1cda26bfa176b9a2cfa2cc297f0",
+     "bytes": 260535
+    }
+   }
+  },
+  {
+   "id": "plate-map",
+   "type": "map_output",
+   "x": 520,
+   "y": 140,
+   "params": {
+    "label": "Snow’s Map 2, as published",
+    "inputMode": "spatial",
+    "mapTitle": "Snow’s Map 2, 1855: which water company supplied which part of south London",
+    "mapSubtitle": "The plate as published, drawn at its georeferenced extent. The blue and the red washes are the two companies’ supply territories and the purple is the zone where both companies’ pipes are intermingled, which is the whole of Snow’s design.",
+    "mapSourceNote": "John Snow, On the Mode of Communication of Cholera, 2nd edn (London: John Churchill, 1855), Map 2. Plate from Project Gutenberg ebook 72894, 1,002 × 788 pixels, georeferenced north-up at about 15.8 m per pixel. Context: a plate is ink, not measurement."
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "p-area",
+   "from": "plate-extent",
+   "to": "plate-map",
+   "port": "area"
+  },
+  {
+   "id": "p-ground",
+   "from": "plate",
+   "to": "plate-map",
+   "port": "ground"
+  }
+ ],
+ "projectId": "snow-s-south-london-water-supply-study-1854-4",
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 1,
+  "updatedAt": "2026-10-31T12:44:21.607Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "plate",
+     "type": "map_image_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "plate-extent",
+     "type": "study_area",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": true,
+     "referenceIds": []
+    },
+    {
+     "id": "plate-map",
+     "type": "map_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "p-area",
+     "from": "plate-extent",
+     "to": "plate-map",
+     "port": "area"
+    },
+    {
+     "id": "p-ground",
+     "from": "plate",
+     "to": "plate-map",
+     "port": "ground"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ }
+}

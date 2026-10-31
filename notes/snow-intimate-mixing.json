@@ -1,0 +1,13 @@
+{
+ "kind": "quoted",
+ "id": "snow-intimate-mixing",
+ "section": "Methods",
+ "quote": "In the sub-districts enumerated in the above table as being supplied by both Companies, the mixing of the supply is of the most intimate kind. The pipes of each Company go down all the streets, and into nearly all the courts and alleys. A few houses are supplied by one Company and a few by the other, according to the decision of the owner or occupier at that time when the Water Companies were in active competition.",
+ "fn": "method",
+ "establishes": "Why supply is independent of the household: the two companies’ pipes run down the same streets, so neighbours differ. This is what Map 2’s purple zone shows.",
+ "relatesTo": [
+  "snow-ready-made-experiment",
+  "snow-chloride-test",
+  "snow-map-2-purpose"
+ ]
+}

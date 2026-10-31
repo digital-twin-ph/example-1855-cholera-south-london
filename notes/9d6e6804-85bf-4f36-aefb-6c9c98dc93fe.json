@@ -1,0 +1,11 @@
+{
+ "kind": "authored",
+ "id": "9d6e6804-85bf-4f36-aefb-6c9c98dc93fe",
+ "section": "Introduction",
+ "text": "Snow's South London comparison is reconstructed here rather than retold. The exercise is the reconciliation: a method argued in 1855 from a table, a map and a street-by-street canvass, re-expressed as a workflow where every input declares its source and every figure can be rebuilt from it. Where the two readings disagree, the disagreement is the finding.",
+ "fn": "rationale",
+ "author": "hermantolentino",
+ "relatesTo": [
+  "snow-ready-made-experiment"
+ ]
+}

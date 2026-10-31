@@ -1,0 +1,585 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "id": "sl-mortality",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w1",
+ "name": "Deaths per 1,000 people, by sub-district",
+ "nodes": [
+  {
+   "id": "table-viii",
+   "type": "table_input",
+   "x": 60,
+   "y": 140,
+   "params": {
+    "label": "Snow 1855 Table VIII · 32 sub-districts",
+    "keys": [
+     "sub_district",
+     "measure"
+    ],
+    "valueField": "count",
+    "source": {
+     "filename": "table-viii-sub-districts-seven-weeks.csv",
+     "origin": "github.com/digital-twin-ph/example-1855-cholera-south-london"
+    },
+    "provenance": {
+     "what": "Snow 1855, Table VIII — population and cholera deaths by sub-district, seven weeks of 1854",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-24",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "CC0-1.0",
+     "licenceSource": "provenance.json in this repository: the 1855 publication is in the public domain and the hand transcription is released CC0-1.0.",
+     "represents": "1854",
+     "note": "Lambeth Church (2nd) carries 26,784 for 1851 population, not the 26,748 printed in the Project Gutenberg Table VIII: two independent transcriptions read 26,784 and only 26,784 reconciles with the 486,936 printed at the foot of the table. The error is in the e-text, not the 1855 printing."
+    },
+    "sourceTable": {
+     "headers": [
+      "sub_district",
+      "population_1851",
+      "deaths_seven_weeks",
+      "deaths_southwark_vauxhall",
+      "deaths_lambeth",
+      "deaths_pump_wells",
+      "deaths_thames_ditches",
+      "deaths_unascertained",
+      "supply_partly_computed"
+     ],
+     "rows": [
+      [
+       "St. Saviour, Southwark",
+       "19709",
+       "125",
+       "115",
+       "0",
+       "0",
+       "10",
+       "0",
+       "yes"
+      ],
+      [
+       "St. Olave, Southwark",
+       "8015",
+       "53",
+       "43",
+       "0",
+       "0",
+       "5",
+       "5",
+       "yes"
+      ],
+      [
+       "St. John, Horsleydown",
+       "11360",
+       "51",
+       "48",
+       "0",
+       "0",
+       "3",
+       "0",
+       "yes"
+      ],
+      [
+       "St. James, Bermondsey",
+       "18899",
+       "123",
+       "102",
+       "0",
+       "0",
+       "21",
+       "0",
+       "yes"
+      ],
+      [
+       "St. Mary Magdalen",
+       "13934",
+       "87",
+       "83",
+       "0",
+       "0",
+       "4",
+       "0",
+       "yes"
+      ],
+      [
+       "Leather Market",
+       "15295",
+       "81",
+       "81",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Rotherhithe",
+       "17805",
+       "103",
+       "68",
+       "0",
+       "0",
+       "35",
+       "0",
+       "yes"
+      ],
+      [
+       "Battersea",
+       "10560",
+       "54",
+       "42",
+       "0",
+       "4",
+       "8",
+       "0",
+       "yes"
+      ],
+      [
+       "Wandsworth",
+       "9611",
+       "11",
+       "1",
+       "0",
+       "2",
+       "8",
+       "0",
+       "no"
+      ],
+      [
+       "Putney",
+       "5280",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Camberwell",
+       "17742",
+       "96",
+       "96",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Peckham",
+       "19444",
+       "59",
+       "59",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Christchurch, Southwark",
+       "16022",
+       "25",
+       "11",
+       "13",
+       "0",
+       "0",
+       "1",
+       "no"
+      ],
+      [
+       "Kent Road",
+       "18126",
+       "57",
+       "52",
+       "5",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Borough Road",
+       "15862",
+       "71",
+       "61",
+       "7",
+       "0",
+       "0",
+       "3",
+       "no"
+      ],
+      [
+       "London Road",
+       "17836",
+       "29",
+       "21",
+       "8",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Trinity, Newington",
+       "20922",
+       "58",
+       "52",
+       "6",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "St. Peter, Walworth",
+       "29861",
+       "90",
+       "84",
+       "4",
+       "0",
+       "0",
+       "2",
+       "no"
+      ],
+      [
+       "St. Mary, Newington",
+       "14033",
+       "21",
+       "19",
+       "1",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Waterloo Road (1st)",
+       "14088",
+       "10",
+       "9",
+       "1",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Waterloo Road (2nd)",
+       "18348",
+       "36",
+       "25",
+       "8",
+       "1",
+       "2",
+       "0",
+       "no"
+      ],
+      [
+       "Lambeth Church (1st)",
+       "18409",
+       "18",
+       "6",
+       "9",
+       "0",
+       "1",
+       "2",
+       "no"
+      ],
+      [
+       "Lambeth Church (2nd)",
+       "26784",
+       "53",
+       "34",
+       "13",
+       "1",
+       "0",
+       "5",
+       "no"
+      ],
+      [
+       "Kennington (1st)",
+       "24261",
+       "71",
+       "63",
+       "5",
+       "3",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Kennington (2nd)",
+       "18848",
+       "38",
+       "34",
+       "3",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Brixton",
+       "14610",
+       "9",
+       "5",
+       "2",
+       "0",
+       "0",
+       "2",
+       "no"
+      ],
+      [
+       "Clapham",
+       "16290",
+       "24",
+       "19",
+       "0",
+       "5",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "St. George, Camberwell",
+       "15849",
+       "42",
+       "30",
+       "9",
+       "2",
+       "0",
+       "1",
+       "no"
+      ],
+      [
+       "Norwood",
+       "3977",
+       "8",
+       "0",
+       "2",
+       "1",
+       "5",
+       "0",
+       "no"
+      ],
+      [
+       "Streatham",
+       "9023",
+       "6",
+       "0",
+       "1",
+       "5",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Dulwich",
+       "1632",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Sydenham",
+       "4501",
+       "4",
+       "0",
+       "1",
+       "2",
+       "0",
+       "1",
+       "no"
+      ]
+     ]
+    },
+    "wide": {
+     "keys": [
+      "sub_district"
+     ],
+     "valueFields": [
+      "population_1851",
+      "deaths_seven_weeks",
+      "deaths_southwark_vauxhall",
+      "deaths_lambeth",
+      "deaths_pump_wells",
+      "deaths_thames_ditches",
+      "deaths_unascertained"
+     ],
+     "measureKey": "measure",
+     "measureNames": {
+      "population_1851": "population",
+      "deaths_seven_weeks": "deaths",
+      "deaths_southwark_vauxhall": "deaths Southwark and Vauxhall",
+      "deaths_lambeth": "deaths Lambeth",
+      "deaths_pump_wells": "deaths pump-wells",
+      "deaths_thames_ditches": "deaths Thames and ditches",
+      "deaths_unascertained": "deaths unascertained"
+     }
+    },
+    "convertOnRun": true,
+    "dataFrom": {
+     "rebuiltFrom": "sourceTable"
+    }
+   }
+  },
+  {
+   "id": "mortality",
+   "type": "rate",
+   "x": 430,
+   "y": 140,
+   "params": {
+    "label": "Deaths per 1,000 people",
+    "source": "table",
+    "measureKey": "measure",
+    "numeratorField": "deaths",
+    "denominatorField": "population",
+    "groupBy": "sub_district",
+    "denominatorUnit": "people",
+    "rateKind": "proportion",
+    "multiplier": 1000,
+    "minimumDenominator": 1000,
+    "numeratorPeriod": "the seven weeks ending 26 August 1854",
+    "denominatorVintage": "the census of 1851"
+   }
+  },
+  {
+   "id": "ranked",
+   "type": "table_output",
+   "x": 810,
+   "y": 140,
+   "params": {
+    "label": "Mortality by sub-district",
+    "inputMode": "table"
+   }
+  },
+  {
+   "id": "ranked-bars",
+   "type": "chart_output",
+   "x": 640,
+   "y": 300,
+   "params": {
+    "label": "Deaths per 1,000 people, ranked",
+    "mark": "bar",
+    "orientation": "horizontal",
+    "chartTitle": "Cholera deaths per 1,000 people, by sub-district, 1854",
+    "subtitle": "Snow 1855 Table VIII · 32 registration sub-districts of South London",
+    "xAxisTitle": "Deaths per 1,000 people",
+    "yAxisTitle": "Sub-district"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "from": "table-viii",
+   "to": "mortality",
+   "port": "records"
+  },
+  {
+   "id": "e2",
+   "from": "mortality",
+   "to": "ranked",
+   "port": "table"
+  },
+  {
+   "id": "ranked-bars-edge",
+   "from": "mortality",
+   "to": "ranked-bars",
+   "port": "records"
+  }
+ ],
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 8,
+  "updatedAt": "2026-10-31T12:26:13.678Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "mortality",
+     "type": "rate",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "ranked",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "ranked-bars",
+     "type": "chart_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "table-viii",
+     "type": "table_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "e1",
+     "from": "table-viii",
+     "to": "mortality",
+     "port": "records"
+    },
+    {
+     "id": "e2",
+     "from": "mortality",
+     "to": "ranked",
+     "port": "table"
+    },
+    {
+     "id": "ranked-bars-edge",
+     "from": "mortality",
+     "to": "ranked-bars",
+     "port": "records"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ },
+ "projectId": "snow-s-south-london-water-supply-study-1854-4"
+}

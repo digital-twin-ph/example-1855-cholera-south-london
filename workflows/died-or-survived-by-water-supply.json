@@ -1,0 +1,995 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "name": "Died or survived, by water supply",
+ "nodes": [
+  {
+   "id": "table-viii",
+   "type": "table_input",
+   "x": 60,
+   "y": 80,
+   "params": {
+    "label": "Snow 1855 Table VIII · population and deaths",
+    "keys": [
+     "sub_district",
+     "measure"
+    ],
+    "valueField": "people",
+    "unit": "people",
+    "source": {
+     "filename": "table-viii-sub-districts-seven-weeks.csv",
+     "bytes": 1460,
+     "sha256": "29abb57c8e071995d2b3d2db348fcf74fa1dc0a1007b14630382aa1c3cc17d18",
+     "rows": 64
+    },
+    "provenance": {
+     "what": "Snow 1855, Table VIII — population and cholera deaths by sub-district, seven weeks of 1854",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-24",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "CC0-1.0",
+     "licenceSource": "provenance.json in this repository: the 1855 publication is in the public domain and the hand transcription is released CC0-1.0.",
+     "represents": "1854",
+     "note": "Lambeth Church (2nd) carries 26,784 for 1851 population, not the 26,748 printed in the Project Gutenberg Table VIII: two independent transcriptions read 26,784 and only 26,784 reconciles with the 486,936 printed at the foot of the table. The error is in the e-text, not the 1855 printing."
+    },
+    "sourceTable": {
+     "headers": [
+      "sub_district",
+      "population_1851",
+      "deaths_seven_weeks",
+      "deaths_southwark_vauxhall",
+      "deaths_lambeth",
+      "deaths_pump_wells",
+      "deaths_thames_ditches",
+      "deaths_unascertained",
+      "supply_partly_computed"
+     ],
+     "rows": [
+      [
+       "St. Saviour, Southwark",
+       "19709",
+       "125",
+       "115",
+       "0",
+       "0",
+       "10",
+       "0",
+       "yes"
+      ],
+      [
+       "St. Olave, Southwark",
+       "8015",
+       "53",
+       "43",
+       "0",
+       "0",
+       "5",
+       "5",
+       "yes"
+      ],
+      [
+       "St. John, Horsleydown",
+       "11360",
+       "51",
+       "48",
+       "0",
+       "0",
+       "3",
+       "0",
+       "yes"
+      ],
+      [
+       "St. James, Bermondsey",
+       "18899",
+       "123",
+       "102",
+       "0",
+       "0",
+       "21",
+       "0",
+       "yes"
+      ],
+      [
+       "St. Mary Magdalen",
+       "13934",
+       "87",
+       "83",
+       "0",
+       "0",
+       "4",
+       "0",
+       "yes"
+      ],
+      [
+       "Leather Market",
+       "15295",
+       "81",
+       "81",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Rotherhithe",
+       "17805",
+       "103",
+       "68",
+       "0",
+       "0",
+       "35",
+       "0",
+       "yes"
+      ],
+      [
+       "Battersea",
+       "10560",
+       "54",
+       "42",
+       "0",
+       "4",
+       "8",
+       "0",
+       "yes"
+      ],
+      [
+       "Wandsworth",
+       "9611",
+       "11",
+       "1",
+       "0",
+       "2",
+       "8",
+       "0",
+       "no"
+      ],
+      [
+       "Putney",
+       "5280",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Camberwell",
+       "17742",
+       "96",
+       "96",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Peckham",
+       "19444",
+       "59",
+       "59",
+       "0",
+       "0",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "Christchurch, Southwark",
+       "16022",
+       "25",
+       "11",
+       "13",
+       "0",
+       "0",
+       "1",
+       "no"
+      ],
+      [
+       "Kent Road",
+       "18126",
+       "57",
+       "52",
+       "5",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Borough Road",
+       "15862",
+       "71",
+       "61",
+       "7",
+       "0",
+       "0",
+       "3",
+       "no"
+      ],
+      [
+       "London Road",
+       "17836",
+       "29",
+       "21",
+       "8",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Trinity, Newington",
+       "20922",
+       "58",
+       "52",
+       "6",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "St. Peter, Walworth",
+       "29861",
+       "90",
+       "84",
+       "4",
+       "0",
+       "0",
+       "2",
+       "no"
+      ],
+      [
+       "St. Mary, Newington",
+       "14033",
+       "21",
+       "19",
+       "1",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Waterloo Road (1st)",
+       "14088",
+       "10",
+       "9",
+       "1",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Waterloo Road (2nd)",
+       "18348",
+       "36",
+       "25",
+       "8",
+       "1",
+       "2",
+       "0",
+       "no"
+      ],
+      [
+       "Lambeth Church (1st)",
+       "18409",
+       "18",
+       "6",
+       "9",
+       "0",
+       "1",
+       "2",
+       "no"
+      ],
+      [
+       "Lambeth Church (2nd)",
+       "26784",
+       "53",
+       "34",
+       "13",
+       "1",
+       "0",
+       "5",
+       "no"
+      ],
+      [
+       "Kennington (1st)",
+       "24261",
+       "71",
+       "63",
+       "5",
+       "3",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Kennington (2nd)",
+       "18848",
+       "38",
+       "34",
+       "3",
+       "1",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Brixton",
+       "14610",
+       "9",
+       "5",
+       "2",
+       "0",
+       "0",
+       "2",
+       "no"
+      ],
+      [
+       "Clapham",
+       "16290",
+       "24",
+       "19",
+       "0",
+       "5",
+       "0",
+       "0",
+       "yes"
+      ],
+      [
+       "St. George, Camberwell",
+       "15849",
+       "42",
+       "30",
+       "9",
+       "2",
+       "0",
+       "1",
+       "no"
+      ],
+      [
+       "Norwood",
+       "3977",
+       "8",
+       "0",
+       "2",
+       "1",
+       "5",
+       "0",
+       "no"
+      ],
+      [
+       "Streatham",
+       "9023",
+       "6",
+       "0",
+       "1",
+       "5",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Dulwich",
+       "1632",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "no"
+      ],
+      [
+       "Sydenham",
+       "4501",
+       "4",
+       "0",
+       "1",
+       "2",
+       "0",
+       "1",
+       "no"
+      ]
+     ]
+    },
+    "wide": {
+     "keys": [
+      "sub_district"
+     ],
+     "valueFields": [
+      "population_1851",
+      "deaths_seven_weeks"
+     ],
+     "measureKey": "measure"
+    },
+    "convertOnRun": true,
+    "dataFrom": {
+     "rebuiltFrom": "sourceTable"
+    }
+   }
+  },
+  {
+   "id": "table-xii",
+   "type": "table_input",
+   "x": 60,
+   "y": 300,
+   "params": {
+    "label": "Snow 1855 Table XII · company by sub-district",
+    "keys": [
+     "sub_district",
+     "water_supply",
+     "measure"
+    ],
+    "valueField": "deaths",
+    "unit": "",
+    "source": {
+     "filename": "table-xii-sub-districts-1849-1854.csv",
+     "bytes": 2229,
+     "sha256": "306ce1eed8f99df9a6008d6a7eff9db8a3f0e06205b2cd0394f9de4c18b37728",
+     "rows": 32
+    },
+    "provenance": {
+     "what": "Snow 1855, Table XII — cholera deaths by sub-district, 1849 and 1854, with the supplying company",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-24",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "CC0-1.0",
+     "licenceSource": "provenance.json in this repository: the 1855 publication is in the public domain and the hand transcription is released CC0-1.0.",
+     "represents": "1849 and 1854"
+    },
+    "sourceTable": {
+     "headers": [
+      "sub_district",
+      "deaths_1849",
+      "deaths_1854",
+      "water_supply"
+     ],
+     "rows": [
+      [
+       "St. Saviour, Southwark",
+       "283",
+       "371",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. Olave, Southwark",
+       "157",
+       "161",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. John, Horsleydown",
+       "192",
+       "148",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. James, Bermondsey",
+       "249",
+       "362",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. Mary Magdalen",
+       "259",
+       "244",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Leather Market",
+       "226",
+       "237",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Rotherhithe",
+       "352",
+       "282",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Wandsworth",
+       "97",
+       "59",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Battersea",
+       "111",
+       "171",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Putney",
+       "8",
+       "9",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Camberwell",
+       "235",
+       "240",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Peckham",
+       "92",
+       "174",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Christchurch, Southwark",
+       "256",
+       "113",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kent Road",
+       "267",
+       "174",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Borough Road",
+       "312",
+       "270",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "London Road",
+       "257",
+       "93",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Trinity, Newington",
+       "318",
+       "210",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. Peter, Walworth",
+       "446",
+       "388",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. Mary, Newington",
+       "143",
+       "92",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Waterloo Road (1st)",
+       "193",
+       "58",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Waterloo Road (2nd)",
+       "243",
+       "117",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Lambeth Church (1st)",
+       "215",
+       "49",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Lambeth Church (2nd)",
+       "544",
+       "193",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kennington (1st)",
+       "187",
+       "303",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kennington (2nd)",
+       "153",
+       "142",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Brixton",
+       "81",
+       "48",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Clapham",
+       "114",
+       "165",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. George, Camberwell",
+       "176",
+       "132",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Norwood",
+       "2",
+       "10",
+       "Lambeth Company only"
+      ],
+      [
+       "Streatham",
+       "154",
+       "15",
+       "Lambeth Company only"
+      ],
+      [
+       "Dulwich",
+       "1",
+       "",
+       "Lambeth Company only"
+      ],
+      [
+       "Sydenham",
+       "5",
+       "12",
+       "Lambeth Company only"
+      ]
+     ]
+    },
+    "wide": {
+     "keys": [
+      "sub_district",
+      "water_supply"
+     ],
+     "valueFields": [
+      "deaths_1854"
+     ],
+     "measureKey": "measure",
+     "measureNames": {
+      "deaths_1854": "deaths 1854"
+     }
+    },
+    "convertOnRun": true,
+    "dataFrom": {
+     "rebuiltFrom": "sourceTable"
+    }
+   }
+  },
+  {
+   "id": "supply",
+   "type": "relate_table",
+   "x": 330,
+   "y": 170,
+   "params": {
+    "label": "The supplying company, onto each sub-district",
+    "on": "sub_district",
+    "bring": "water_supply"
+   }
+  },
+  {
+   "id": "by-supply",
+   "type": "group_table",
+   "x": 580,
+   "y": 170,
+   "params": {
+    "label": "Population and deaths, totalled by company",
+    "by": [
+     "water_supply",
+     "measure"
+    ]
+   }
+  },
+  {
+   "id": "survivors",
+   "type": "derive_value",
+   "x": 820,
+   "y": 170,
+   "params": {
+    "label": "People who did not die · population minus deaths",
+    "keyColumn": "measure",
+    "left": "population_1851",
+    "operator": "minus",
+    "right": "deaths_seven_weeks",
+    "name": "survived"
+   }
+  },
+  {
+   "id": "outcomes",
+   "type": "select_rows",
+   "x": 1060,
+   "y": 170,
+   "params": {
+    "label": "Died or survived, by water supply",
+    "keyColumn": "measure",
+    "values": [
+     "deaths_seven_weeks",
+     "survived"
+    ]
+   }
+  },
+  {
+   "id": "contingency",
+   "type": "table_output",
+   "x": 1300,
+   "y": 80,
+   "params": {
+    "label": "Died or survived cholera, by water supply · 1854",
+    "inputMode": "table",
+    "totalsAsserted": true
+   }
+  },
+  {
+   "id": "estimates",
+   "type": "two_by_two",
+   "x": 1300,
+   "y": 320,
+   "params": {
+    "label": "One company against the other, on people",
+    "exposureColumn": "water_supply",
+    "exposed": "Southwark and Vauxhall Company only",
+    "unexposed": "Lambeth Company only",
+    "outcomeColumn": "measure",
+    "caseValue": "deaths_seven_weeks",
+    "nonCaseValue": "survived",
+    "level": 95
+   }
+  },
+  {
+   "id": "estimates-table",
+   "type": "table_output",
+   "x": 1560,
+   "y": 320,
+   "params": {
+    "label": "The two-by-two, with risk ratio and odds ratio",
+    "inputMode": "table",
+    "totalsAsserted": true
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "c1",
+   "from": "table-viii",
+   "to": "supply",
+   "port": "records"
+  },
+  {
+   "id": "c2",
+   "from": "table-xii",
+   "to": "supply",
+   "port": "related"
+  },
+  {
+   "id": "c3",
+   "from": "supply",
+   "to": "by-supply",
+   "port": "records"
+  },
+  {
+   "id": "c4",
+   "from": "by-supply",
+   "to": "survivors",
+   "port": "records"
+  },
+  {
+   "id": "c5",
+   "from": "survivors",
+   "to": "outcomes",
+   "port": "records"
+  },
+  {
+   "id": "c6",
+   "from": "outcomes",
+   "to": "contingency",
+   "port": "table"
+  },
+  {
+   "id": "c7",
+   "from": "outcomes",
+   "to": "estimates",
+   "port": "records"
+  },
+  {
+   "id": "c8",
+   "from": "estimates",
+   "to": "estimates-table",
+   "port": "table"
+  }
+ ],
+ "projectId": "snow-s-south-london-water-supply-study-1854-4",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w7",
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 1,
+  "updatedAt": "2026-10-31T12:44:21.625Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "by-supply",
+     "type": "group_table",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "contingency",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "estimates",
+     "type": "two_by_two",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "estimates-table",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "outcomes",
+     "type": "select_rows",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "supply",
+     "type": "relate_table",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "survivors",
+     "type": "derive_value",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "table-viii",
+     "type": "table_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "table-xii",
+     "type": "table_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "c1",
+     "from": "table-viii",
+     "to": "supply",
+     "port": "records"
+    },
+    {
+     "id": "c2",
+     "from": "table-xii",
+     "to": "supply",
+     "port": "related"
+    },
+    {
+     "id": "c3",
+     "from": "supply",
+     "to": "by-supply",
+     "port": "records"
+    },
+    {
+     "id": "c4",
+     "from": "by-supply",
+     "to": "survivors",
+     "port": "records"
+    },
+    {
+     "id": "c5",
+     "from": "survivors",
+     "to": "outcomes",
+     "port": "records"
+    },
+    {
+     "id": "c6",
+     "from": "outcomes",
+     "to": "contingency",
+     "port": "table"
+    },
+    {
+     "id": "c7",
+     "from": "outcomes",
+     "to": "estimates",
+     "port": "records"
+    },
+    {
+     "id": "c8",
+     "from": "estimates",
+     "to": "estimates-table",
+     "port": "table"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ }
+}

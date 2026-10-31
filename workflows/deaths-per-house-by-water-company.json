@@ -1,0 +1,337 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "name": "Deaths per house, by water company",
+ "nodes": [
+  {
+   "id": "table-ix",
+   "type": "table_input",
+   "x": 40,
+   "y": 80,
+   "params": {
+    "label": "Snow 1855 Table IX · houses supplied, deaths",
+    "keys": [
+     "supplier",
+     "measure"
+    ],
+    "valueField": "count",
+    "unit": "",
+    "source": {
+     "filename": "table-ix-first-seven-weeks.csv",
+     "bytes": 0,
+     "sha256": "",
+     "rows": 6
+    },
+    "provenance": {
+     "what": "Snow 1855, Table IX — houses and cholera deaths by water company, first seven weeks of 1854",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-24",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "CC0-1.0",
+     "licenceSource": "provenance.json in this repository: the 1855 publication is in the public domain and the hand transcription is released CC0-1.0.",
+     "represents": "1854",
+     "note": "The deaths-per-10,000-houses column is Snow’s own and is not recomputed here. Two of its three values differ from the quotient of the columns beside them — Lambeth 37 against 37.54, Rest of London 59 against 55.46 — and an independent transcription flags the same two."
+    },
+    "sourceTable": {
+     "headers": [
+      "supplier",
+      "houses",
+      "deaths",
+      "deaths_per_10000_houses"
+     ],
+     "rows": [
+      [
+       "Southwark and Vauxhall Company",
+       "40046",
+       "1263",
+       "315"
+      ],
+      [
+       "Lambeth Company",
+       "26107",
+       "98",
+       "37"
+      ],
+      [
+       "Rest of London",
+       "256423",
+       "1422",
+       "59"
+      ]
+     ]
+    },
+    "wide": {
+     "keys": [
+      "supplier"
+     ],
+     "valueFields": [
+      "deaths",
+      "houses"
+     ],
+     "measureKey": "measure"
+    },
+    "convertOnRun": true,
+    "dataFrom": {
+     "rebuiltFrom": "sourceTable"
+    }
+   }
+  },
+  {
+   "id": "per-house",
+   "type": "rate",
+   "x": 360,
+   "y": 80,
+   "params": {
+    "label": "Cholera deaths per 10,000 houses supplied",
+    "source": "table",
+    "measureKey": "measure",
+    "numeratorField": "deaths",
+    "denominatorField": "houses",
+    "groupBy": "supplier",
+    "denominatorUnit": "houses",
+    "rateKind": "ratio",
+    "multiplier": 10000,
+    "minimumDenominator": 0,
+    "numeratorPeriod": "seven weeks to 26 August 1854",
+    "denominatorVintage": "1854 supply records"
+   }
+  },
+  {
+   "id": "ratio",
+   "type": "rate_ratio",
+   "x": 680,
+   "y": 80,
+   "params": {
+    "label": "Rate ratio of death per house, by water company",
+    "compared": "Southwark and Vauxhall Company",
+    "reference": "Lambeth Company",
+    "level": 95,
+    "method": "log-normal"
+   }
+  },
+  {
+   "id": "two-by-two",
+   "type": "table_output",
+   "x": 1000,
+   "y": 80,
+   "params": {
+    "label": "Cholera deaths and houses supplied, by company",
+    "inputMode": "table"
+   }
+  },
+  {
+   "id": "survivors",
+   "type": "derive_value",
+   "x": 360,
+   "y": 360,
+   "params": {
+    "label": "Houses without a death · at most one per house",
+    "keyColumn": "measure",
+    "left": "houses",
+    "operator": "minus",
+    "right": "deaths",
+    "name": "houses without a death"
+   }
+  },
+  {
+   "id": "outcomes",
+   "type": "select_rows",
+   "x": 680,
+   "y": 360,
+   "params": {
+    "label": "Died or survived, by company",
+    "keyColumn": "measure",
+    "values": [
+     "deaths",
+     "houses without a death"
+    ]
+   }
+  },
+  {
+   "id": "houses-2x2",
+   "type": "table_output",
+   "x": 1000,
+   "y": 360,
+   "params": {
+    "label": "Houses with and without a cholera death",
+    "inputMode": "table",
+    "totalsAsserted": true
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "r1",
+   "from": "table-ix",
+   "to": "per-house",
+   "port": "records"
+  },
+  {
+   "id": "r2",
+   "from": "per-house",
+   "to": "ratio",
+   "port": "rates"
+  },
+  {
+   "id": "r3",
+   "from": "ratio",
+   "to": "two-by-two",
+   "port": "table"
+  },
+  {
+   "id": "r4",
+   "from": "table-ix",
+   "to": "survivors",
+   "port": "records"
+  },
+  {
+   "id": "r5",
+   "from": "survivors",
+   "to": "outcomes",
+   "port": "records"
+  },
+  {
+   "id": "r6",
+   "from": "outcomes",
+   "to": "houses-2x2",
+   "port": "table"
+  }
+ ],
+ "projectId": "snow-s-south-london-water-supply-study-1854-4",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w6",
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 1,
+  "updatedAt": "2026-10-31T12:44:21.624Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "houses-2x2",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "outcomes",
+     "type": "select_rows",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "per-house",
+     "type": "rate",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "ratio",
+     "type": "rate_ratio",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "survivors",
+     "type": "derive_value",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "table-ix",
+     "type": "table_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "two-by-two",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "r1",
+     "from": "table-ix",
+     "to": "per-house",
+     "port": "records"
+    },
+    {
+     "id": "r2",
+     "from": "per-house",
+     "to": "ratio",
+     "port": "rates"
+    },
+    {
+     "id": "r3",
+     "from": "ratio",
+     "to": "two-by-two",
+     "port": "table"
+    },
+    {
+     "id": "r4",
+     "from": "table-ix",
+     "to": "survivors",
+     "port": "records"
+    },
+    {
+     "id": "r5",
+     "from": "survivors",
+     "to": "outcomes",
+     "port": "records"
+    },
+    {
+     "id": "r6",
+     "from": "outcomes",
+     "to": "houses-2x2",
+     "port": "table"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ }
+}

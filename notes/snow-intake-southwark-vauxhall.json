@@ -1,0 +1,11 @@
+{
+ "kind": "quoted",
+ "id": "snow-intake-southwark-vauxhall",
+ "section": "Methods",
+ "quote": "The water works at London Bridge were abolished, and the united company derived their supply from the Thames at Battersea Fields, about half a mile above Vauxhall Bridge. The Lambeth Water Company continued to obtain their supply opposite to Hungerford Market; but they had established a small reservoir at Brixton.",
+ "fn": "source",
+ "establishes": "Where the Southwark and Vauxhall Company drew its water.",
+ "relatesTo": [
+  "snow-intake-lambeth-move"
+ ]
+}

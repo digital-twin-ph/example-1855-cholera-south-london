@@ -1,0 +1,50 @@
+{
+ "schema": "fieldwork/project-assets/1",
+ "assets": {
+  "assets/the-32-registration-sub-districts.json": {
+   "sha256": "790740810996e6955e3fb63b48ba882e06273e54160c814f1e0ff48aa8cf8af3",
+   "bytes": 107962
+  },
+  "assets/the-thames-above-and-below-the-tidal-limit.json": {
+   "sha256": "43bd58f2653e3c52a8fa22f9c6e0b259a33d556737467595e01b9a001437d807",
+   "bytes": 168579
+  },
+  "assets/where-the-water-came-from-and-the-tidal-limit.json": {
+   "sha256": "6e31a57ad1b4237fb035cebed75b37727c60718092f5ad2cf5dccabe0d4ae941",
+   "bytes": 3113
+  },
+  "geo/map2.jpg": {
+   "sha256": "a3131c5fc9ad7605ae1c9b79d58ad3f54baab1cda26bfa176b9a2cfa2cc297f0",
+   "bytes": 260535
+  }
+ },
+ "acquired": {
+  "the-thames-merged-and-clipped": {
+   "source": "openstreetmap-extract",
+   "licence": "ODbL-1.0",
+   "licenceIRI": "https://opendatacommons.org/licenses/odbl/1-0/",
+   "attribution": "© OpenStreetMap contributors",
+   "sourceIRI": "https://www.openstreetmap.org/copyright",
+   "kinds": [
+    "water"
+   ],
+   "bbox": [
+    -0.34,
+    51.38,
+    0.03,
+    51.52
+   ],
+   "at": "2026-10-31T12:28:56.966Z",
+   "kept": 866,
+   "dropped": {
+    "outsideBox": 2559,
+    "unclosed": 0,
+    "noGeometry": 0,
+    "belowMinVertices": 0
+   },
+   "sha256": "bbfff5ca75fc744f7a07a9dc8e4de8cc7c74f3b80313b0ce7408863e27950ae0",
+   "bytes": 129877457,
+   "rebuilds": "snow-s-south-london-water-supply-study-1854-4/w8#polygon_input-1793449662567"
+  }
+ }
+}

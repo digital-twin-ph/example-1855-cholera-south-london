@@ -1,0 +1,330 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "id": "sl-years",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w4",
+ "name": "Cholera in 1849 compared with 1854",
+ "nodes": [
+  {
+   "id": "table-xii",
+   "type": "table_input",
+   "x": 80,
+   "y": 140,
+   "params": {
+    "label": "Snow 1855 Table XII · deaths in 1849 and 1854",
+    "keys": [
+     "sub_district",
+     "measure"
+    ],
+    "valueField": "count",
+    "source": {
+     "filename": "table-xii-sub-districts-1849-1854.csv",
+     "origin": "github.com/digital-twin-ph/example-1855-cholera-south-london"
+    },
+    "provenance": {
+     "what": "Snow 1855, Table XII — cholera deaths by sub-district, 1849 and 1854, with the supplying company",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-24",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "CC0-1.0",
+     "licenceSource": "provenance.json in this repository: the 1855 publication is in the public domain and the hand transcription is released CC0-1.0.",
+     "represents": "1849 and 1854"
+    },
+    "sourceTable": {
+     "headers": [
+      "sub_district",
+      "deaths_1849",
+      "deaths_1854",
+      "water_supply"
+     ],
+     "rows": [
+      [
+       "St. Saviour, Southwark",
+       "283",
+       "371",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. Olave, Southwark",
+       "157",
+       "161",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. John, Horsleydown",
+       "192",
+       "148",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. James, Bermondsey",
+       "249",
+       "362",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "St. Mary Magdalen",
+       "259",
+       "244",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Leather Market",
+       "226",
+       "237",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Rotherhithe",
+       "352",
+       "282",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Wandsworth",
+       "97",
+       "59",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Battersea",
+       "111",
+       "171",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Putney",
+       "8",
+       "9",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Camberwell",
+       "235",
+       "240",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Peckham",
+       "92",
+       "174",
+       "Southwark and Vauxhall Company only"
+      ],
+      [
+       "Christchurch, Southwark",
+       "256",
+       "113",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kent Road",
+       "267",
+       "174",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Borough Road",
+       "312",
+       "270",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "London Road",
+       "257",
+       "93",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Trinity, Newington",
+       "318",
+       "210",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. Peter, Walworth",
+       "446",
+       "388",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. Mary, Newington",
+       "143",
+       "92",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Waterloo Road (1st)",
+       "193",
+       "58",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Waterloo Road (2nd)",
+       "243",
+       "117",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Lambeth Church (1st)",
+       "215",
+       "49",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Lambeth Church (2nd)",
+       "544",
+       "193",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kennington (1st)",
+       "187",
+       "303",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Kennington (2nd)",
+       "153",
+       "142",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Brixton",
+       "81",
+       "48",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Clapham",
+       "114",
+       "165",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "St. George, Camberwell",
+       "176",
+       "132",
+       "Lambeth Company and Southwark and Vauxhall Company"
+      ],
+      [
+       "Norwood",
+       "2",
+       "10",
+       "Lambeth Company only"
+      ],
+      [
+       "Streatham",
+       "154",
+       "15",
+       "Lambeth Company only"
+      ],
+      [
+       "Dulwich",
+       "1",
+       "",
+       "Lambeth Company only"
+      ],
+      [
+       "Sydenham",
+       "5",
+       "12",
+       "Lambeth Company only"
+      ]
+     ]
+    },
+    "wide": {
+     "keys": [
+      "sub_district"
+     ],
+     "valueFields": [
+      "deaths_1849",
+      "deaths_1854"
+     ],
+     "measureKey": "measure",
+     "measureNames": {
+      "deaths_1849": "deaths 1849",
+      "deaths_1854": "deaths 1854"
+     }
+    },
+    "convertOnRun": true,
+    "dataFrom": {
+     "rebuiltFrom": "sourceTable"
+    }
+   }
+  },
+  {
+   "id": "both-years",
+   "type": "table_output",
+   "x": 520,
+   "y": 140,
+   "params": {
+    "label": "1849 and 1854 by sub-district",
+    "inputMode": "table"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "y1",
+   "from": "table-xii",
+   "to": "both-years",
+   "port": "table"
+  }
+ ],
+ "projectId": "snow-s-south-london-water-supply-study-1854-4",
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 1,
+  "updatedAt": "2026-10-31T12:44:21.607Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "both-years",
+     "type": "table_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "table-xii",
+     "type": "table_input",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "y1",
+     "from": "table-xii",
+     "to": "both-years",
+     "port": "table"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ }
+}

@@ -1,0 +1,427 @@
+{
+ "schema": "fieldwork/workflow/1",
+ "id": "sl-ground",
+ "workflowKey": "snow-s-south-london-water-supply-study-1854-4/w2",
+ "name": "The ground: an extent, its sub-districts and the river",
+ "nodes": [
+  {
+   "id": "extent",
+   "type": "study_area",
+   "x": 60,
+   "y": 60,
+   "params": {
+    "source": "drawn",
+    "selectionMode": "bbox",
+    "label": "South London, the study extent",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -0.259402,
+        51.411703
+       ],
+       [
+        -0.03127,
+        51.411703
+       ],
+       [
+        -0.03127,
+        51.508552
+       ],
+       [
+        -0.259402,
+        51.508552
+       ],
+       [
+        -0.259402,
+        51.411703
+       ]
+      ]
+     ]
+    },
+    "provenance": {
+     "what": "The extent enclosing the 32 registration sub-districts of Snow’s Table VIII. Derived here from their published boundaries by taking their bounding box; it is a frame rather than a published boundary, and nothing is attributed to it.",
+     "source": "Derived in Fieldwork from the sub-district layer",
+     "retrievedAt": "2026-10-29"
+    },
+    "drawnBy": {
+     "login": "hermantolentino",
+     "basis": "declared",
+     "at": "2026-10-26T00:09:53.885Z"
+    },
+    "spatialReference": {
+     "datum": "WGS84",
+     "geodeticCRS": "EPSG:4326",
+     "geometryCRS": "OGC:CRS84",
+     "axisOrder": "longitude-latitude",
+     "units": "degree"
+    }
+   }
+  },
+  {
+   "id": "districts",
+   "type": "polygon_input",
+   "x": 60,
+   "y": 260,
+   "params": {
+    "label": "The 32 registration sub-districts",
+    "nameField": "subdist",
+    "layerName": "Registration sub-districts",
+    "provenance": {
+     "what": "The 32 sub-districts of Snow’s Table VIII, as boundaries. Geometry only.",
+     "citation": {
+      "type": "article",
+      "authors": [
+       {
+        "family": "Koch",
+        "given": "Thomas"
+       },
+       {
+        "family": "Denike",
+        "given": "Kenneth"
+       }
+      ],
+      "title": "Rethinking John Snow’s South London study: A Bayesian evaluation and recalculation",
+      "container": "Social Science & Medicine",
+      "volume": "63",
+      "issue": "1",
+      "pages": "271–283",
+      "doi": "10.1016/j.socscimed.2005.12.006"
+     },
+     "published": "2006",
+     "represents": "1855",
+     "retrieved": "2026-10-24",
+     "licence": "BSD-2-Clause",
+     "licenceSource": "Carried with the Center for Spatial Data Science distribution, which states Coleman’s BSD-2-Clause terms.",
+     "note": "WHAT IS TAKEN FROM THIS WORK IS THE GEOMETRY, AND NOTHING ELSE. The 32 sub-district polygons are Koch and Denike’s, georeferenced from Snow’s Map 2 and modified by the Center for Spatial Data Science in QGIS. None of the paper’s method is used here: it is an empirical-Bayes evaluation and recalculation, and these workflows compute rates, a rate ratio and a two-by-two table and nothing Bayesian. None of its recalculated values is used either. The counts and populations in this example are transcribed from Snow’s own tables and verified against Coleman’s independent transcription — and Coleman (2024, Social Science & Medicine 344) argues that this paper altered the primary data and that its results are invalid. The citation records where the boundaries came from. It is not an endorsement of the analysis, and a reader who met the title alone could reasonably think otherwise."
+    },
+    "dataFrom": {
+     "path": "assets/the-32-registration-sub-districts.json",
+     "sha256": "790740810996e6955e3fb63b48ba882e06273e54160c814f1e0ff48aa8cf8af3",
+     "bytes": 107962
+    }
+   }
+  },
+  {
+   "id": "thames",
+   "type": "polygon_input",
+   "x": 60,
+   "y": 460,
+   "params": {
+    "label": "The Thames, above and below the tidal limit",
+    "layerName": "Thames reaches",
+    "nameField": "reach",
+    "source": {
+     "filename": "thames-reaches.geojson",
+     "sha256": "57f2965feb93233d575d0ea76f677a7a158092bdb171f3d165a9462533d3c90f"
+    },
+    "dataFrom": {
+     "path": "assets/the-thames-above-and-below-the-tidal-limit.json",
+     "sha256": "43bd58f2653e3c52a8fa22f9c6e0b259a33d556737467595e01b9a001437d807",
+     "bytes": 168579
+    }
+   }
+  },
+  {
+   "id": "intakes",
+   "type": "point_input",
+   "x": 60,
+   "y": 160,
+   "params": {
+    "label": "Where the water came from, and the tidal limit",
+    "sourceInfo": {
+     "format": "Derived",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "description": "Three Thames sites named in Snow 1855. Coordinates are of the landmarks he names, geocoded from OpenStreetMap via Nominatim; the works themselves are not surveyed here."
+    },
+    "provenance": {
+     "what": "The three Thames sites the two companies drew from, as Snow names them, and the tidal limit that separates them",
+     "citation": {
+      "type": "book",
+      "authors": [
+       {
+        "family": "Snow",
+        "given": "John"
+       }
+      ],
+      "title": "On the Mode of Communication of Cholera",
+      "place": "London",
+      "publisher": "John Churchill"
+     },
+     "published": "1855",
+     "edition": {
+      "statement": "2nd",
+      "published": "2024-02-07",
+      "publisher": "Project Gutenberg, eBook #72894"
+     },
+     "retrieved": "2026-10-27",
+     "represents": "1849–1854",
+     "url": "https://www.gutenberg.org/cache/epub/72894/pg72894.txt",
+     "licence": "none-applies",
+     "licenceSource": "An 1855 publication: in the public domain, which is a positive claim that no terms attach rather than an absence of information.",
+     "note": "THE POSITIONS ARE LANDMARKS, NOT WORKS. Snow locates the intakes by relation — \"about half a mile above Vauxhall Bridge\", \"opposite Hungerford Market\" — and each point marks the named landmark with the relation recorded beside it. Landmark coordinates were obtained from OpenStreetMap via the Nominatim geocoder, © OpenStreetMap contributors, ODbL. Three coordinates are not a substantial extract of that database, so no share-alike obligation is asserted; the attribution is recorded because the figures came from somewhere and a reader should know where. The tidal limit is Teddington Lock, which Snow names himself and twice — once as the point governing what reaches the sea, once in placing the Lambeth Company’s supply above it. An earlier version of this note said he does not name it; that was wrong, and it was written after a search of the source missed the passages because the text is hard wrapped and the phrase spanned two lines."
+    },
+    "spatialReference": {
+     "datum": "WGS84",
+     "geodeticCRS": "EPSG:4326",
+     "geometryCRS": "OGC:CRS84",
+     "axisOrder": "longitude-latitude",
+     "units": "degree"
+    },
+    "dataFrom": {
+     "path": "assets/where-the-water-came-from-and-the-tidal-limit.json",
+     "sha256": "6e31a57ad1b4237fb035cebed75b37727c60718092f5ad2cf5dccabe0d4ae941",
+     "bytes": 3113
+    }
+   }
+  },
+  {
+   "id": "layers",
+   "type": "stack_polygons",
+   "x": 420,
+   "y": 360,
+   "params": {
+    "label": "The sub-districts and the river"
+   }
+  },
+  {
+   "id": "where",
+   "type": "map_output",
+   "x": 760,
+   "y": 140,
+   "params": {
+    "label": "Sub-districts of South London",
+    "inputMode": "spatial"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "id": "e-extent",
+   "from": "extent",
+   "to": "where",
+   "port": "area"
+  },
+  {
+   "id": "e-intakes",
+   "from": "intakes",
+   "to": "where",
+   "port": "points"
+  },
+  {
+   "id": "e-districts",
+   "from": "districts",
+   "to": "layers",
+   "port": "polygons"
+  },
+  {
+   "id": "e-thames",
+   "from": "thames",
+   "to": "layers",
+   "port": "polygons_2"
+  },
+  {
+   "id": "e-layers",
+   "from": "layers",
+   "to": "where",
+   "port": "polygons"
+  }
+ ],
+ "manifest": {
+  "schema": "fieldwork/project-manifest/2",
+  "revision": 1,
+  "updatedAt": "2026-10-29T02:38:38.356Z",
+  "inventory": {
+   "nodes": [
+    {
+     "id": "districts",
+     "type": "polygon_input",
+     "records": [
+      "feature-1",
+      "feature-10",
+      "feature-11",
+      "feature-12",
+      "feature-13",
+      "feature-14",
+      "feature-15",
+      "feature-16",
+      "feature-17",
+      "feature-18",
+      "feature-19",
+      "feature-2",
+      "feature-20",
+      "feature-21",
+      "feature-22",
+      "feature-23",
+      "feature-24",
+      "feature-25",
+      "feature-26",
+      "feature-27",
+      "feature-28",
+      "feature-29",
+      "feature-3",
+      "feature-30",
+      "feature-31",
+      "feature-32",
+      "feature-4",
+      "feature-5",
+      "feature-6",
+      "feature-7",
+      "feature-8",
+      "feature-9"
+     ],
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [
+      "d_lam",
+      "d_overall",
+      "d_pump",
+      "d_sou",
+      "d_thames",
+      "d_unasc",
+      "deaths1849",
+      "deaths1854",
+      "dis_ID",
+      "district",
+      "lam_degree",
+      "perc_lam",
+      "perc_other",
+      "perc_sou",
+      "pop1849",
+      "pop1851",
+      "pop1854",
+      "pop_house",
+      "pred_DiD49",
+      "pred_DiD54",
+      "pred_Snow",
+      "rAvSupR_49",
+      "rAvSupR_54",
+      "rate1849",
+      "rate1854",
+      "rate_lam7w",
+      "rate_oth7w",
+      "rate_sou7w",
+      "sub_ID",
+      "subdist",
+      "supplier",
+      "supplierID"
+     ],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "extent",
+     "type": "study_area",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": true,
+     "referenceIds": []
+    },
+    {
+     "id": "intakes",
+     "type": "point_input",
+     "records": [
+      "intake-lambeth-from-1852",
+      "intake-lambeth-to-1852",
+      "intake-southwark-vauxhall",
+      "tidal-limit"
+     ],
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [
+      "company",
+      "drawn_from",
+      "in_use",
+      "name",
+      "point_marks",
+      "snow_says"
+     ],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "layers",
+     "type": "stack_polygons",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "thames",
+     "type": "polygon_input",
+     "records": [
+      "thames-non-tidal",
+      "thames-tidal"
+     ],
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [
+      "clipped_to",
+      "limit_lat",
+      "limit_lon",
+      "method",
+      "osm_relations",
+      "osm_relations_clipped_away",
+      "reach",
+      "source",
+      "tidal_limit",
+      "what"
+     ],
+     "geometry": false,
+     "referenceIds": []
+    },
+    {
+     "id": "where",
+     "type": "map_output",
+     "records": null,
+     "fields": [],
+     "attributeRules": [],
+     "attributeKeys": [],
+     "geometry": false,
+     "referenceIds": []
+    }
+   ],
+   "connections": [
+    {
+     "id": "e-districts",
+     "from": "districts",
+     "to": "layers",
+     "port": "polygons"
+    },
+    {
+     "id": "e-extent",
+     "from": "extent",
+     "to": "where",
+     "port": "area"
+    },
+    {
+     "id": "e-intakes",
+     "from": "intakes",
+     "to": "where",
+     "port": "points"
+    },
+    {
+     "id": "e-layers",
+     "from": "layers",
+     "to": "where",
+     "port": "polygons"
+    },
+    {
+     "id": "e-thames",
+     "from": "thames",
+     "to": "layers",
+     "port": "polygons_2"
+    }
+   ],
+   "assets": [],
+   "links": []
+  }
+ },
+ "projectId": "snow-s-south-london-water-supply-study-1854-4"
+}
