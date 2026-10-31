@@ -414,6 +414,16 @@ only in the second decimal. What moves the number to 5.35 is that the subject be
 
 ### One company against the other, on people
 
+The two-by-two as the application now draws it, with the letters every formula is written in and
+every margin — `N` is the two named groups and not the table, which is what the stratum warning
+below is about:
+
+| | deaths_seven_weeks | survived | total |
+| --- | --- | --- | --- |
+| **Southwark and Vauxhall only** | *a* 844 | *b* 166,810 | *a+b* 167,654 |
+| **Lambeth only** | *c* 18 | *d* 19,115 | *c+d* 19,133 |
+| **total** | *a+c* 862 | *b+d* 185,925 | **N 186,787** |
+
 | | |
 | --- | --- |
 | Risk, Southwark and Vauxhall only | 5.03 per 1,000 |
@@ -428,6 +438,19 @@ filling them from memory is how a wrong label enters a teaching context.
 
 Checked against statsmodels to 1e-9, every estimate and every bound, in validation-lab check 30.
 **No agreement with Epi Info is claimed.**
+
+**THE DESIGN IS DECLARED, AND IT IS NOT THE ONE NEXT DOOR.** From 2026-10-31 this workflow carries
+a `study_design` node declaring it **ecological**, period 1854, unit of analysis the
+**sub-district** — because Tables VIII and XII attach a company to a sub-district and not to a
+person, so every measure above is a group-level quantity and a relation between group-level
+measures need not hold between individuals. `Deaths per house, by water company` declares a
+**cohort** on **houses** over the same period, because Table IX knows the company per house. One
+study, two designs, and the application now states which is which on the result itself.
+
+The figure reads `ecological · unit of analysis: sub-district · cells count people` — two
+different subjects, both stated. That distinction is what separates the 8.40 on houses from the
+5.35 on people; in the letters, one computation takes `a+b` as houses and the other as people, and
+until now nothing on either figure said so.
 
 **The middle row is excluded, not controlled for.** The 300,149 people where both companies' pipes
 ran are in neither group of the 2×2, and the application says so on the result. That is Snow's own
