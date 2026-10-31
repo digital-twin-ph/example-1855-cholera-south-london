@@ -1,0 +1,11 @@
+{
+ "kind": "authored",
+ "id": "3a3cda3c-7465-4b7e-ab1a-854090a54d14",
+ "section": "Methods",
+ "text": "The four tables were transcribed by hand from the Gutenberg text and then checked rather than trusted. Table VIII was compared cell by cell against two independent transcriptions, Coleman (2019) and the Center for Spatial Data Science sub-districts dataset: 224 of 224 cells match across 32 sub-districts and seven columns, and all seven column totals match the totals Snow prints. One cell was corrected, and the correction is recorded with its source.",
+ "fn": "verification",
+ "author": "hermantolentino",
+ "relatesTo": [
+  "snow-chloride-test"
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "kind": "quoted",
+ "id": "snow-intake-lambeth-move",
+ "section": "Methods",
+ "quote": "The Lambeth Company removed their water works, in 1852, from opposite Hungerford Market to Thames Ditton; thus obtaining a supply of water quite free from the sewage of London.",
+ "fn": "source",
+ "establishes": "That the Lambeth Company moved its intake upstream in 1852, which is the variable the comparison turns on.",
+ "relatesTo": [
+  "snow-ready-made-experiment",
+  "snow-intake-southwark-vauxhall",
+  "snow-tidal-limit-teddington",
+  "snow-lambeth-above-teddington"
+ ]
+}

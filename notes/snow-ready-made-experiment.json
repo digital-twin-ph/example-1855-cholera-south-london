@@ -1,0 +1,13 @@
+{
+ "kind": "quoted",
+ "id": "snow-ready-made-experiment",
+ "section": "Introduction",
+ "quote": "As there is no difference whatever, either in the houses or the people receiving the supply of the two Water Companies, or in any of the physical conditions with which they are surrounded, it is obvious that no experiment could have been devised which would more thoroughly test the effect of water supply on the progress of cholera than this, which circumstances placed ready made before the observer. The experiment, too, was on the grandest scale.",
+ "fn": "rationale",
+ "establishes": "That the comparison was a natural experiment, not a designed one.",
+ "relatesTo": [
+  "snow-grandest-scale",
+  "snow-intimate-mixing",
+  "snow-intake-lambeth-move"
+ ]
+}

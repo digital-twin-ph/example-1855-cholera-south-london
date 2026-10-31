@@ -1,0 +1,25 @@
+{
+ "schema": "fieldwork/project/2",
+ "id": "snow-s-south-london-water-supply-study-1854-4",
+ "name": "Snow's South London water supply study, 1854",
+ "subject": "Whether the water company supplying a house changed the risk of dying of cholera",
+ "workflows": [
+  "deaths-per-1-000-people-by-sub-district",
+  "the-ground-an-extent-its-sub-districts-and-the-r",
+  "snow-s-map-2-1855-as-published",
+  "cholera-in-1849-compared-with-1854",
+  "deaths-per-1-000-people-mapped",
+  "deaths-per-house-by-water-company",
+  "died-or-survived-by-water-supply",
+  "the-river-as-it-runs-the-thames-the-sub-district"
+ ],
+ "changedAt": "2026-10-31T12:44:09.189Z",
+ "authors": [
+  {
+   "login": "hermantolentino",
+   "name": "Herman Tolentino",
+   "basis": "declared"
+  }
+ ],
+ "createdAt": "2026-10-31T11:58:17.839Z"
+}

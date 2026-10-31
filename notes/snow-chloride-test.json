@@ -1,0 +1,11 @@
+{
+ "kind": "quoted",
+ "id": "snow-chloride-test",
+ "section": "Methods",
+ "quote": "Indeed, the difference in appearance on adding nitrate of silver to the two kinds of water was so great, that they could be at once distinguished without any further trouble. Therefore when the resident could not give clear and conclusive evidence about the Water Company, I obtained some of the water in a small phial, and wrote the address on the cover, when I could examine it after coming home.",
+ "fn": "method",
+ "establishes": "How exposure was determined where the resident could not say which company supplied them: a chemical test on the water itself.",
+ "relatesTo": [
+  "snow-intimate-mixing"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "kind": "authored",
+ "id": "653adb24-5aa9-4e56-a54f-b9a3ecf1f285",
+ "section": "Methods",
+ "text": "What Snow called a ready-made experiment is two designs in this repository, not one. Table IX assigns the supplying company per house, which is a retrospective cohort. Tables VIII and XII attach it per sub-district, which is ecological. Both are carried as separate workflows rather than averaged into a single claim.",
+ "fn": "method",
+ "author": "hermantolentino",
+ "relatesTo": [
+  "snow-ready-made-experiment",
+  "snow-intimate-mixing"
+ ]
+}
