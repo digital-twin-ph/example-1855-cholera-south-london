@@ -264,16 +264,22 @@ Table IX, which is the comparison Snow's argument actually rests on: houses supp
 Southwark and Vauxhall Company against houses supplied by the Lambeth Company, in the same
 streets, in the same weeks.
 
-**Rate ratio 8.40**, with a 95% interval of **6.84 to 10.32**. The interval is a log-normal
-approximation over the event counts, checked against an independent implementation
-(`statsmodels`) in the validation lab — which found, on its first run, that this application had
-been using a rounded 1.9600 for the normal quantile instead of 1.959963984540054.
+**Rate ratio 8.40**, with a 95% interval of **6.84 to 10.32**. A `two_by_two` reads Table IX as
+**events and units at risk**: deaths and houses for each company, with Rest of London named as left
+out. The interval is a log-normal approximation over the event counts, checked against an
+independent implementation (`statsmodels`) in the validation lab — which found, on its first run,
+that this application had been using a rounded 1.9600 for the normal quantile instead of
+1.959963984540054.
+
+Until Fieldwork 0.25.0 this was a separate `rate_ratio` widget that could read only a `rate`. It
+was retired into the two-by-two on 2026-11-05, and the numbers are the same to the last digit.
 
 **The table is the output, not the ratio.** A reader checks a summary against the counts it came
-from, so the step emits the four cells — 1,263 deaths among 40,046 houses, 98 among 26,107 — and
-carries the ratio alongside. The published `deaths_per_10000_houses` column is deliberately not
-imported: it is Snow's own arithmetic, and a workflow that read his answer would be checking
-nothing.
+from, so the step emits the four cells — 1,263 deaths among 40,046 houses, 98 among 26,107 — in
+the letters $a_1$, $n_1$, $a_0$, $n_0$, with each company's rate, and carries the ratio alongside.
+A `rate` beside it gives Snow's scale, **deaths per 10,000 houses**: 315.4, 37.5 and 55.5. The
+published `deaths_per_10000_houses` column is deliberately not imported: it is Snow's own
+arithmetic, and a workflow that read his answer would be checking nothing.
 
 **The 2×2 is now built in the application, not prepared for it.** Two steps do it, from the same
 Table IX already on the canvas: one derives `houses without a death` as `houses` minus `deaths`,
