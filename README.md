@@ -191,8 +191,8 @@ It now reads as what it is. The **study extent** is the bounding box enclosing t
 to nothing: it is a frame. The **32 registration sub-districts** are a polygon layer, 2,182
 vertices as published, named by `subdist`, carrying the BSD-2 attribution that belongs to the
 boundaries themselves. The **Thames above and below the tidal limit** is a second polygon layer.
-Both are collected with **Collect polygon layers**, largest first so the river draws over the
-sub-districts, and the map draws them over the extent with the four points — the three water
+Both go to the map on inputs of their own, which draws the larger first so the river shows over the
+sub-districts, over the extent with the four points — the three water
 intakes and Teddington Lock — on top.
 
 Every part shares a border with another. Fieldwork refused that until 2026-10-24: a study area
