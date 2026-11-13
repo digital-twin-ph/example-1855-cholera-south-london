@@ -225,6 +225,19 @@ be connected to anything that samples or clips a raster.
 The plate is carried once. Both this workflow and the choropleth reference the same image by
 digest, so importing the project writes one copy of it rather than two.
 
+
+### Snow's Map 2, placed by hand
+
+The same plate, placed by the learner. Configure… offers `geo/map2.jpg`, fetched from this
+repository at the commit Fieldwork pins and checked against its digest, only when asked for. The
+plate is placed north-up by matching four features on the plate and today's map, the four in
+`geo/map2-georeference.json`: Kennington Oval, Battersea Park, Crystal Palace grounds and Nunhead
+Cemetery. Each is a cue with a ring around it, 12 pixels on the plate and 200 m on the map; these
+are areas, not street corners, and the recorded Oval point is 144 m from where the published
+placement puts it.
+
+The outline is the plate's extent as published, from `geo/map2.jgw`, so a placement can be set
+against it. Needs Fieldwork 0.112.0 or later, which can offer an image from an example's repository.
 ### Cholera in 1849 compared with 1854
 
 Table XII, both years, by sub-district — the before and after across Lambeth moving its intake
